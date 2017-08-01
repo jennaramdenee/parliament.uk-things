@@ -3,6 +3,9 @@ class ContactPointsController < ApplicationController
 
   ROUTE_MAP = {
     show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.contact_points(params[:contact_point_id]) }
+
+    # New Data API URL structure
+    # show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.contact_point_by_id.set_url_params({ contact_point_id: params[:contact_point_id] }) }
   }.freeze
 
   def show

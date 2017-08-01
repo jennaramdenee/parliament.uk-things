@@ -4,6 +4,9 @@ module Parliaments
 
     ROUTE_MAP = {
       show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.parliaments(params[:parliament_id]).houses(params[:house_id]) }
+
+      # New Data API URL structure
+      # show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.parliament_house.set_url_params({ parliament_id: params[:parliament_id], house_id: params[:house_id] }) }
     }.freeze
 
     def show

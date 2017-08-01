@@ -2,9 +2,28 @@ class ConstituenciesController < ApplicationController
   before_action :data_check, :build_request, except: :postcode_lookup
 
   ROUTE_MAP = {
+    index:             proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies },
     show:              proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies(params[:constituency_id]) },
     lookup:            proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.lookup(params[:source], params[:id]) },
-    map:               proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies(params[:constituency_id]).map }
+    lookup_by_letters: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.partial(params[:letters]) },
+    a_to_z_current:    proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.current.a_z_letters },
+    current:           proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.current },
+    map:               proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies(params[:constituency_id]) },
+    letters:           proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies(params[:letter]) },
+    current_letters:   proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.current(params[:letter]) },
+    a_to_z:            proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituencies.a_z_letters }
+
+    # New Data API URL structure
+    # index:             proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_index },
+    # show:              proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_by_id.set_url_params({ constituency_id: params[:constituency_id] }) },
+    # lookup:            proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_lookup.set_url_params({ property: params[:source], value: params[:id] }) },
+    # lookup_by_letters: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_by_substring.set_url_params({ substring: params[:letters] }) },
+    # a_to_z_current:    proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_current_a_to_z },
+    # current:           proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_current },
+    # map:               proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_map.set_url_params({ constituency_id: params[:constituency_id] }) },
+    # letters:           proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_by_initial.set_url_params({ initial: params[:letter] }) },
+    # current_letters:   proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_current_by_initial.set_url_params({ initial: params[:letter] }) },
+    # a_to_z:            proc { Parliament::Utils::Helpers::ParliamentHelper.parliament_request.constituency_a_to_z }
   }.freeze
 
   # Renders a single constituency given a constituency id.

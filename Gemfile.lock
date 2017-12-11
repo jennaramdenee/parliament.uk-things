@@ -1,3 +1,8 @@
+PATH
+  remote: ../parliament.uk-routes
+  specs:
+    parliament-routes (0.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -143,7 +148,6 @@ GEM
     parliament-grom-decorators (0.14.0)
     parliament-ntriple (0.2.0)
       grom (~> 0.5)
-    parliament-routes (0.5.1)
     parliament-ruby (0.10.1)
     parliament-utils (0.5.0)
       bandiera-client
@@ -205,6 +209,7 @@ GEM
       link_header (~> 0.0, >= 0.0.8)
     rdf-vocab (2.2.8)
       rdf (~> 2.2)
+    redcarpet (3.4.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -312,7 +317,7 @@ DEPENDENCIES
   parallel_tests
   parliament-grom-decorators (~> 0.14)
   parliament-ntriple (~> 0.2)
-  parliament-routes (~> 0.3)
+  parliament-routes!
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.4)
   pugin (~> 1.6)
@@ -323,6 +328,7 @@ DEPENDENCIES
   rails (~> 5.1.2)
   rails-controller-testing
   rake
+  redcarpet
   rspec-rails
   rubocop
   simplecov (~> 0.14)

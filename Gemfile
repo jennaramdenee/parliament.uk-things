@@ -23,7 +23,8 @@ gem 'parliament-grom-decorators', '~> 0.14'
 gem 'geosparql_to_geojson', '~> 0.2'
 
 # Parliament routing
-gem 'parliament-routes', '~> 0.3'
+gem 'parliament-routes', path: '../parliament.uk-routes'
+# gem 'parliament-routes', '~> 0.3'
 
 # Parliament-Utils gem for generic set up and configuration
 gem 'parliament-utils', '~> 0.4', require: false
@@ -55,7 +56,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rack-test', '0.7.0'
 
-  
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   # Use parallel_tests to run specs across all CPU cores locally
@@ -63,6 +63,9 @@ group :development, :test do
 
   # Use FactoryBot for building models in tests
   gem 'factory_bot_rails'
+
+  gem 'redcarpet'
+
 end
 
 group :development do

@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
       @request,
       Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Article')
     ).first
+
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+
+    @article_body = markdown.render(@article.articleBody).html_safe
   end
 
 end

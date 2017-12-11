@@ -1,9 +1,13 @@
-%section--primary#content{:tabindex => "0"}
+%section--primary#content{ tabindex: "0" }
   .container
     .block
       %h1= "Title: " + @article.articleTitle
-      %p= "Audience: " + @article.articleHasAudience.first.articleAudienceName
       %p= "Summary: " + @article.articleSummary
+      %p= "Steps: "
+      %p
+      :markdown
+        #{@article_body}
+      %p= "Audience: " + @article.articleHasAudience.first.articleAudienceName
       %p= "Type: " + @article.articleHasType.first.articleTypeName
       %p= "Topics:"
       %ul.list--bullet

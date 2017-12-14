@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3030/webarticle_by_id?webarticle_id=asdf1234
+    uri: http://localhost:3030/webarticle_by_id?webarticle_id=ccdwcKYM
     body:
       encoding: US-ASCII
       string: ''
@@ -21,79 +21,59 @@ http_interactions:
       code: 200
       message: OK
     headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '1786'
       Content-Type:
       - application/n-triples
-      Content-Disposition:
-      - inline; filename="index"
-      Last-Modified:
-      - Thu, 14 Dec 2017 12:37:48 GMT
-      X-Content-Type-Options:
-      - nosniff
-      Content-Length:
-      - '5307'
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Set-Cookie:
+      - ARRAffinity=8e2a056adb1b7abe4eaf33e650cedb436e20433b5855b1a32b1d35b5078580cc;Path=/;HttpOnly;Domain=fixedquery201710091000.azurewebsites.net
+      Date:
+      - Thu, 14 Dec 2017 14:28:43 GMT
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: "<https://id.parliament.uk/ccdwcKYM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <https://id.parliament.uk/schema/Article> .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/title> \"title - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/summary> \"summary - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/body> \"body - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/relatedArticle> <https://id.parliament.uk/88GcJm8s>
-        .\r\n<https://id.parliament.uk/88GcJm8s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <https://id.parliament.uk/schema/Article> .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/title> \"title - 2\" .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/summary> \"summary - 2\" .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/body> \"body - 2\" .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/relatedArticle> <https://id.parliament.uk/5NZbplzc>
+        <http://example.com/content/schema/title> \"title - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/summary> \"summary - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/body> \"body - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/relatedArticle> <https://id.parliament.uk/5NZbplzc>
         .\r\n<https://id.parliament.uk/5NZbplzc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
         <https://id.parliament.uk/schema/Article> .\r\n<https://id.parliament.uk/5NZbplzc>
-        <http://example.com/content/title> \"title - 3\" .\r\n<https://id.parliament.uk/5NZbplzc>
-        <http://example.com/content/summary> \"summary - 3\" .\r\n<https://id.parliament.uk/5NZbplzc>
-        <http://example.com/content/body> \"body - 3\" .\r\n<https://id.parliament.uk/5NZbplzc>
-        <http://example.com/content/relatedArticle> <https://id.parliament.uk/asdf1234>
-        .\r\n<https://id.parliament.uk/88GcJm8s> <http://example.com/content/relatedArticle>
-        <https://id.parliament.uk/ccdwcKYM> .\r\n<https://id.parliament.uk/asdf1234>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Article>
-        .\r\n<https://id.parliament.uk/88GcJm8s> <http://example.com/content/topic>
-        <https://id.parliament.uk/autos1> .\r\n<https://id.parliament.uk/autos1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://example.com/content/Topic> .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/topic> <https://id.parliament.uk/autos2> .\r\n<https://id.parliament.uk/autos2>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/Topic>
-        .\r\n<https://id.parliament.uk/autos2> <http://example.com/content/name> \"name
-        - 1\" .\r\n<https://id.parliament.uk/88GcJm8s> <http://example.com/content/topic>
-        <https://id.parliament.uk/autos3> .\r\n<https://id.parliament.uk/autos3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://example.com/content/Topic> .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/topic> <https://id.parliament.uk/autos4> .\r\n<https://id.parliament.uk/autos4>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/Topic>
-        .\r\n<https://id.parliament.uk/88GcJm8s> <http://example.com/content/articletype>
-        <https://id.parliament.uk/APaJn0ZK> .\r\n<https://id.parliament.uk/APaJn0ZK>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/ArticleType>
-        .\r\n<https://id.parliament.uk/88GcJm8s> <http://example.com/content/audience>
-        <https://id.parliament.uk/autos5> .\r\n<https://id.parliament.uk/autos5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://example.com/content/Audience> .\r\n<https://id.parliament.uk/88GcJm8s>
-        <http://example.com/content/audience> <https:://id.parliament.uk/autos6> .\r\n<https://id.parliament.uk/autos6>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/Audience>
-        .\r\n<https://id.parliament.uk/autos6> <http://example.com/content/name> \"name
-        - 2\" .\r\n<https://id.parliament.uk/ccdwcKYM> <http://example.com/content/relatedArticle>
-        <https://id.parliament.uk/5NZbplzc> .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/topic> <https://id.parliament.uk/autos2> .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/articletype> <https://id.parliament.uk/autos7>
-        .\r\n<https://id.parliament.uk/autos7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://example.com/content/ArticleType> .\r\n<https://id.parliament.uk/autos7>
-        <http://example.com/content/name> \"name - 3\" .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/articletype> <https://id.parliament.uk/autos8>
-        .\r\n<https://id.parliament.uk/autos8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
-        <http://example.com/content/ArticleType> .\r\n<https://id.parliament.uk/autos8>
-        <http://example.com/content/name> \"name - 4\" .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/audience> <https://id.parliament.uk/autos6> .\r\n<https://id.parliament.uk/ccdwcKYM>
-        <http://example.com/content/publisher> <https://id.parliament.uk/autos9> .\r\n<https://id.parliament.uk/autos9>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/Publisher>
-        .\r\n<https://id.parliament.uk/autos9> <http://example.com/content/name> \"name
-        - 5\" .\r\n<https://id.parliament.uk/ccdwcKYM> <http://example.com/content/collection>
-        <https://id.parliament.uk/autos10> .\r\n<https://id.parliament.uk/autos10>
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/content/Collection>
-        .\r\n<https://id.parliament.uk/autos10> <http://example.com/content/name>
-        \"name - 6\" .\r\n"
+        <http://example.com/content/schema/title> \"title - 2\" .\r\n<https://id.parliament.uk/5NZbplzc>
+        <http://example.com/content/schema/summary> \"summary - 2\" .\r\n<https://id.parliament.uk/5NZbplzc>
+        <http://example.com/content/schema/body> \"body - 2\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/topic> <http://example.com/content/6qyxIGp3tCIECKCwqEwoAA>
+        .\r\n<http://example.com/content/6qyxIGp3tCIECKCwqEwoAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/Topic> .\r\n<http://example.com/content/6qyxIGp3tCIECKCwqEwoAA>
+        <http://example.com/content/schema/name> \"name - 1\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/articleType> <http://example.com/content/6hn6oMzpO8CSGa4Way686i>
+        .\r\n<http://example.com/content/6hn6oMzpO8CSGa4Way686i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/ArticleType> .\r\n<http://example.com/content/6hn6oMzpO8CSGa4Way686i>
+        <http://example.com/content/schema/name> \"name - 2\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/articleType> <http://example.com/content/6QSF0e74ekC2oeYAq42gQI>
+        .\r\n<http://example.com/content/6QSF0e74ekC2oeYAq42gQI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/ArticleType> .\r\n<http://example.com/content/6QSF0e74ekC2oeYAq42gQI>
+        <http://example.com/content/schema/name> \"name - 3\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/audience> <http://example.com/content/4livmtHbHqiGaaocqKseUs>
+        .\r\n<http://example.com/content/4livmtHbHqiGaaocqKseUs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/Audience> .\r\n<http://example.com/content/4livmtHbHqiGaaocqKseUs>
+        <http://example.com/content/schema/name> \"name - 4\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/publisher> <http://example.com/content/55mpkMQdy8EQOyymgYmysm>
+        .\r\n<http://example.com/content/55mpkMQdy8EQOyymgYmysm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/Publisher> .\r\n<http://example.com/content/55mpkMQdy8EQOyymgYmysm>
+        <http://example.com/content/schema/name> \"name - 5\" .\r\n<https://id.parliament.uk/ccdwcKYM>
+        <http://example.com/content/schema/collection> <http://example.com/content/7IqkTIvwxq8eoK0wwkGueM>
+        .\r\n<http://example.com/content/7IqkTIvwxq8eoK0wwkGueM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <http://example.com/content/schema/Collection> .\r\n<http://example.com/content/7IqkTIvwxq8eoK0wwkGueM>
+        <http://example.com/content/schema/name> \"name - 6\" .\r\n"
     http_version: 
   recorded_at: Mon, 18 Sep 2017 00:00:00 GMT
 recorded_with: VCR 3.0.3

@@ -5,16 +5,16 @@
     %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     - if @article.summary
-      %blockquote.block.theme--mint--light= markdown(@article.summary)
+      %blockquote.block.theme--mint--light= MarkdownHelper.markdown(@article.summary)
 
   %article#content{ tabindex: "0" }
     %h2= "Steps:"
-    = markdown(@article.body)
+    = MarkdownHelper.markdown(@article.body)
 
     %p= "Audience: " + @article.audience.first.name
     %p= "Type:"
     %ul.list--bullet
-      - @article.articletype.each do |type|
+      - @article.articleType.each do |type|
         %li= type.name
 
     %h2= "Topics:"

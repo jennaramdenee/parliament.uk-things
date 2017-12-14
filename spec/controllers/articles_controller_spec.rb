@@ -5,7 +5,7 @@ RSpec.describe ArticlesController, vcr: true do
   describe 'GET show' do
     context 'variable assignment' do
       before(:each) do
-        get :show, params: { article_id: 'asdf1234' }
+        get :show, params: { article_id: 'ccdwcKYM' }
       end
 
       it 'should have a response with a http status ok (200)' do
@@ -27,8 +27,8 @@ RSpec.describe ArticlesController, vcr: true do
       METHODS = [
         {
           route: 'show',
-          parameters: { article_id: 'asdf1234' },
-          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/webarticle_by_id?webarticle_id=asdf1234"
+          parameters: { article_id: 'ccdwcKYM' },
+          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/webarticle_by_id?webarticle_id=ccdwcKYM"
         }
       ]
 
@@ -68,7 +68,7 @@ RSpec.describe ArticlesController, vcr: true do
       end
 
       it 'should raise ActionController::UnknownFormat error' do
-        expect{ get :show, params: { article_id: 'asdf1234' } }.to raise_error(ActionController::UnknownFormat)
+        expect{ get :show, params: { article_id: 'ccdwcKYM' } }.to raise_error(ActionController::UnknownFormat)
       end
     end
   end

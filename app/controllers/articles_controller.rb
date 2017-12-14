@@ -16,9 +16,6 @@ class ArticlesController < ApplicationController
 
     @article = @article.first
 
-
-
-
   end
 
 end

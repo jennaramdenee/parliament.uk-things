@@ -28,8 +28,8 @@ RSpec.describe ArticlesController, vcr: true do
         {
           route: 'show',
           parameters: { article_id: 'asdf1234' },
-          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/article_by_id?article_id=asdf1234"
-        },
+          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/webarticle_by_id?webarticle_id=asdf1234"
+        }
       ]
 
       before(:each) do

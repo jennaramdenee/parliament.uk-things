@@ -24,3 +24,8 @@
 
     %p= "Collection: " + @article.collection.first.name
     %p= "Publisher Name: " + @article.publisher.first.name
+
+    %h2= "Related Articles:"
+    %ul.list--bullet
+      - @article.relatedArticle.each do |a|
+        %li= link_to(a.title, article_path(a.graph_id))

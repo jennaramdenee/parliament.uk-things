@@ -6,14 +6,14 @@ class ArticlesController < ApplicationController
   }.freeze
 
   def show
-    @article = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
+    articles = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
       @request,
       Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Article')
-
     )
 
-    @article = @article.first
+    @article = articles.find { |a| a.graph_id == params[:article_id] }
 
+    raise ActionController::RoutingError, 'Article Not Found' unless @article
   end
 
 end

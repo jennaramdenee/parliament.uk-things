@@ -165,7 +165,7 @@ RSpec.describe ConstituenciesController, vcr: true do
 
   describe '#data_check' do
     context 'an available data format is requested' do
-      METHODS = [
+      methods = [
         {
           route: 'lookup',
           parameters: { source: 'mnisId', id: '3274' },
@@ -184,7 +184,7 @@ RSpec.describe ConstituenciesController, vcr: true do
       end
 
       it 'should have a response with http status redirect (302)' do
-        METHODS.each do |method|
+        methods.each do |method|
           if method.include?(:parameters)
             get method[:route].to_sym, params: method[:parameters]
           else
@@ -195,7 +195,7 @@ RSpec.describe ConstituenciesController, vcr: true do
       end
 
       it 'redirects to the data service' do
-        METHODS.each do |method|
+        methods.each do |method|
           if method.include?(:parameters)
             get method[:route].to_sym, params: method[:parameters]
           else

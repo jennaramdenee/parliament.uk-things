@@ -30,7 +30,8 @@ gem 'parliament-routes', path: '../parliament.uk-routes'
 gem 'parliament-utils', '~> 0.4', require: false
 
 # Parliament NTriple processes N-triple data
-gem 'parliament-ntriple', '~> 0.2', require: false
+gem 'parliament-ntriple', path: '../parliament-ntriple', require: false
+# gem 'parliament-ntriple', '~> 0.2', require: false
 
 # Use bandiera-client for feature flagging
 gem 'bandiera-client'
@@ -50,6 +51,8 @@ gem 'rack-rewrite'
 # Include time zone information
 gem 'tzinfo-data'
 
+gem 'grom', path: '../grom', require: false
+#
 gem 'vcard', '~> 0.2'
 
 group :development, :test do

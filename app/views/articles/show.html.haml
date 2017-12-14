@@ -1,17 +1,23 @@
-%section--primary#content{ tabindex: "0" }
-  .container
-    .block
-      %h1= "Title: " + @article.articleTitle
-      %p= "Summary: " + @article.articleSummary
-      %p= "Steps: "
-      %p
-      :markdown
-        #{@article_body}
-      %p= "Audience: " + @article.articleHasAudience.first.articleAudienceName
-      %p= "Type: " + @article.articleHasType.first.articleTypeName
-      %p= "Topics:"
-      %ul.list--bullet
-        - @article.articleHasTopic.each do |topic|
-          %li= topic.articleTopicName
-      %p= "Collection: " + @article.articleHasCollection.first.articleCollectionName
-      %p= "Publisher Name: " + @article.articleHasPublisher.first.personGivenName + " " + @article.articleHasPublisher.first.personFamilyName
+.container.block.theme--grey-5
+  .section--primary.hero.theme--grey-5
+    %span= "MPs Guide to Procedure:"
+    %h1= @article.articleTitle
+    %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    - if @article.articleSummary
+      %blockquote.block.theme--mint--light= markdown(@article.articleSummary)
+
+  %article#content{ tabindex: "0" }
+    %h2= "Steps:"
+    = markdown(@article.articleBody)
+
+    %p= "Audience: " + @article.articleHasAudience.first.articleAudienceName
+    %p= "Type: " + @article.articleHasType.first.articleTypeName
+
+    %h2= "Topics:"
+    %ul.list--bullet
+      - @article.articleHasTopic.each do |topic|
+        %li= topic.articleTopicName
+
+    %p= "Collection: " + @article.articleHasCollection.first.articleCollectionName
+    %p= "Publisher Name: " + @article.articleHasPublisher.first.personGivenName + " " + @article.articleHasPublisher.first.personFamilyName

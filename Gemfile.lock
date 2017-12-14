@@ -1,4 +1,9 @@
 PATH
+  remote: ../parliament.uk-pugin-components-ruby
+  specs:
+    pugin (1.6.4)
+
+PATH
   remote: ../parliament.uk-routes
   specs:
     parliament-routes (0.6.0)
@@ -149,7 +154,6 @@ GEM
     parliament-grom-decorators (0.14.1)
     parliament-ntriple (0.2.1)
       grom (~> 0.5)
-    parliament-routes (0.5.1)
     parliament-ruby (0.10.2)
     parliament-utils (0.5.0)
       bandiera-client
@@ -166,7 +170,6 @@ GEM
       ast (~> 2.3)
     powerpack (0.1.1)
     public_suffix (3.0.1)
-    pugin (1.6.4)
     puma (3.10.0)
     rack (2.0.3)
     rack-rewrite (1.5.1)
@@ -322,7 +325,7 @@ DEPENDENCIES
   parliament-routes!
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.4)
-  pugin (~> 1.6)
+  pugin!
   puma (~> 3.10.0)
   rack-rewrite
   rack-test (= 0.7.0)

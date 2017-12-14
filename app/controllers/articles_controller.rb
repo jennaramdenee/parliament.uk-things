@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :data_check, :build_request
 
+  helper_method :markdown
+
   ROUTE_MAP = {
     show: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.article_by_id.set_url_params({ article_id: params[:article_id] }) },
   }.freeze
@@ -10,10 +12,11 @@ class ArticlesController < ApplicationController
       @request,
       Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Article')
     ).first
+  end
 
+  def markdown(template)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-
-    @article_body = markdown.render(@article.articleBody).html_safe
+    return markdown.render(template).html_safe
   end
 
 end

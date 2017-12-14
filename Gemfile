@@ -30,13 +30,14 @@ gem 'parliament-routes', path: '../parliament.uk-routes'
 gem 'parliament-utils', '~> 0.4', require: false
 
 # Parliament NTriple processes N-triple data
-gem 'parliament-ntriple', path: '../parliament-ntriple', require: false
-# gem 'parliament-ntriple', '~> 0.2', require: false
+# gem 'parliament-ntriple', path: '../parliament-ntriple', require: false
+gem 'parliament-ntriple', '~> 0.2', require: false
 
 # Use bandiera-client for feature flagging
 gem 'bandiera-client'
 
 # Use Pugin for front-end components and templates
+# gem 'pugin', path: '../parliament.uk-pugin-components-ruby'
 gem 'pugin', '~> 1.6', require: false
 
 # Use dotenv to override environment variables

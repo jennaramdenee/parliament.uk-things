@@ -1,17 +1,27 @@
-%section--primary#content{ tabindex: "0" }
-  .container
-    .block
-      %h1= "Title: " + @article.title
-      %p= "Summary: " + @article.summary
-      %p= "Steps: "
-      %p
-      :markdown
-        #{@article.body}
-      %p= "Audience: "
-      - @audiences.each do |a|
-        %p= a.name
-      %p= "Type: " + @article_types.first.name
-      %p= "Collection: "
-      - @collections.each do |collection|
-        %p= collection.name
-      %p= "Publisher Name: " + @publishers.first.name
+.container.block.theme--grey-5
+  .section--primary.hero.theme--grey-5
+    %span= "MPs Guide to Procedure:"
+    %h1= @article.title
+    %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    - if @article.summary
+      %blockquote.block.theme--mint--light= markdown(@article.summary)
+
+  %article#content{ tabindex: "0" }
+    %h2= "Steps:"
+    = markdown(@article.body)
+
+    %p= "Audience: " + @article.audience.first.name
+    %p= "Type:"
+    %ul.list--bullet
+      - @article.articletype.each do |type|
+        %li= type.name
+
+
+    %h2= "Topics:"
+    %ul.list--bullet
+      - @article.topic.each do |t|
+        %li= t.name
+
+    %p= "Collection: " + @article.collection.first.name
+    %p= "Publisher Name: " + @article.publisher.first.name

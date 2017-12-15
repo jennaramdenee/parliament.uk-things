@@ -8,9 +8,10 @@ class ArticlesController < ApplicationController
   def show
     articles = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
       @request,
-      Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('Article')
+      Parliament::Utils::Helpers::RequestHelper.namespace_uri_schema_path('WebArticle')
     )
 
+    # Finds the article we are looking for, as GET request may return multiple Articles
     @article = articles.find { |a| a.graph_id == params[:article_id] }
 
     raise ActionController::RoutingError, 'Article Not Found' unless @article

@@ -1,31 +1,41 @@
 .container.block.theme--grey-5
   .section--primary.hero.theme--grey-5
     %span= "MPs Guide to Procedure:"
-    %h1= @article.title
-    %p.lead Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    - if @article.summary
-      %blockquote.block.theme--mint--light= MarkdownHelper.markdown(@article.summary)
+    %h1= @article.article_title
+    %h2= @article.article_summary
 
   %article#content{ tabindex: "0" }
-    %h2= "Steps:"
-    = MarkdownHelper.markdown(@article.body)
-
-    %p= "Audience: " + @article.audience.first.name
-    %p= "Type:"
-    %ul.list--bullet
-      - @article.articleType.each do |type|
-        %li= type.name
-
-    %h2= "Topics:"
-    %ul.list--bullet
-      - @article.topic.each do |t|
-        %li= t.name
-
-    %p= "Collection: " + @article.collection.first.name
-    %p= "Publisher Name: " + @article.publisher.first.name
-
+    = MarkdownHelper.markdown(@article.article_body)
+    = MarkdownHelper.markdown("## Heading 2.1\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\n![Ms Diane Abbott](https://api.parliament.uk/Staging/photo/S3bGSTqn.jpeg?crop=MCU_3:2&width=260&quality=80)\n## Heading 2.2\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\n| Header     | Header     |\n| ---------- | ---------- |\n| Cell       | Cell       |\n| Cell       | Cell       |\n\n## Heading 2.3\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n1. Item 1\n2. Item 2\n\t- Nested item 1\n\t- Nested item 2\n\t- Nested item 3\n3. Item 3\n\t1. Nested item 1")
+.container.block.theme--grey-5
+  - unless @article.related_articles.empty?
     %h2= "Related Articles:"
     %ul.list--bullet
-      - @article.relatedArticle.each do |a|
-        %li= link_to(a.title, article_path(a.graph_id))
+      - @article.related_articles.each do |article|
+        %li= link_to(article.title, article_path(article.graph_id))
+
+.container.block.theme--grey-5
+  %p= "Audiences:"
+  %ul.list--bullet
+    - @article.audiences.each do |audience|
+      %li= audience.name
+
+  %p= "Types:"
+  %ul.list--bullet
+    - @article.types.each do |type|
+      %li= type.name
+
+  %h2= "Topics:"
+  %ul.list--bullet
+    - @article.topics.each do |topic|
+      %li= topic.name
+
+  %p= "Collections:"
+  %ul.list--bullet
+    - @article.collections.each do |collection|
+      %p= collection.name
+
+  %p= "Publishers::"
+  %ul.list--bullet
+    - @article.publishers.each do |publisher|
+      %p= publisher.name

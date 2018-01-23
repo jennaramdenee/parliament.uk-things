@@ -1,0 +1,20 @@
+.section--primary
+  .container--offset
+    %h1= @topic.name
+
+%section#content{ tabindex: "0" }
+  .container--offset
+    = MarkdownHelper.markdown(@topic.description)
+
+    %h2= "Articles tagged with '#{@topic.name}'"
+    - @topic_articles.each do |article|
+      %p= link_to(article.article_title, article_path(article.graph_id))
+      %p= article.article_summary
+
+    %h2= "Parent topics for #{@topic.name}"
+    - @parent_topics.each do |topic|
+      %p= link_to(topic.name, topic_path(topic.graph_id))
+
+    %h2= "Child topics for #{@topic.name}"
+    - @child_topics.each do |topic|
+      %p= link_to(topic.name, topic_path(topic.graph_id))

@@ -8,3 +8,7 @@
   %article
     .container--offset
       = MarkdownHelper.markdown(@article.article_body)
+
+      %h2= 'Related Articles'
+      - @related_articles.each do |article|
+        %p= link_to(article.article_title, article_path(article.graph_id))

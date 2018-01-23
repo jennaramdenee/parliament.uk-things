@@ -17,7 +17,8 @@ gem 'haml'
 gem 'parliament-ruby', '~> 0.8'
 
 # Parliament Grom Decorators decorates Grom nodes
-gem 'parliament-grom-decorators', '~> 0.16'
+gem 'parliament-grom-decorators', path: '../parliament-grom-decorators'
+# gem 'parliament-grom-decorators', '~> 0.16'
 
 # Converts GeoSparql to GeoJSON
 gem 'geosparql_to_geojson', '~> 0.2'
@@ -57,7 +58,7 @@ gem 'vcard', '~> 0.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rack-test', '0.7.0'
- 
+
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   # Use parallel_tests to run specs across all CPU cores locally

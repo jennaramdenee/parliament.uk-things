@@ -9,7 +9,9 @@ class ArticlesController < ApplicationController
     articles = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'WebArticle')
 
     # Finds the article we are looking for, as GET request may return multiple Articles
-    @article = articles.find { |a| a.graph_id == params[:article_id] }
+    @article = articles.find { |article| article.graph_id == params[:article_id] }
+    @related_articles = @article.related_articles
+    # .sort_by(&:article_title)
 
     raise ActionController::RoutingError, 'Article Not Found' unless @article
   end

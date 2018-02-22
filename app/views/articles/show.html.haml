@@ -17,3 +17,10 @@
               %li
                 .list--details
                   = link_to(article.article_title, article_path(article.graph_id))
+
+          %h2= 'Collections this article belongs to'
+          %ul.list--pipe
+            - @collections.each do |collection|
+              %li
+                .list--details
+                  = link_to(collection.name, collection_path(collection.graph_id))

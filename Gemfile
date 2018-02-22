@@ -17,13 +17,15 @@ gem 'haml'
 gem 'parliament-ruby', '~> 0.8'
 
 # Parliament Grom Decorators decorates Grom nodes
-gem 'parliament-grom-decorators', '~> 0.17'
+# gem 'parliament-grom-decorators', '~> 0.17'
+gem 'parliament-grom-decorators', path: '../parliament-grom-decorators'
 
 # Converts GeoSparql to GeoJSON
 gem 'geosparql_to_geojson', '~> 0.2'
 
 # Parliament routing
-gem 'parliament-routes', '~> 0.6'
+# gem 'parliament-routes', '~> 0.6'
+gem 'parliament-routes', path: '../parliament.uk-routes'
 
 # Parliament-Utils gem for generic set up and configuration
 gem 'parliament-utils', '~> 0.6', require: false

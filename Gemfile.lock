@@ -1,3 +1,13 @@
+PATH
+  remote: ../parliament-grom-decorators
+  specs:
+    parliament-grom-decorators (0.16.4)
+
+PATH
+  remote: ../parliament.uk-routes
+  specs:
+    parliament-routes (0.6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -141,10 +151,8 @@ GEM
     parallel (1.12.1)
     parallel_tests (2.21.1)
       parallel
-    parliament-grom-decorators (0.17.0)
     parliament-ntriple (0.2.1)
       grom (~> 0.5)
-    parliament-routes (0.6.0)
     parliament-ruby (0.10.2)
     parliament-utils (0.6.1)
       bandiera-client
@@ -311,9 +319,9 @@ DEPENDENCIES
   haml
   listen (>= 3.0.5, < 3.2)
   parallel_tests
-  parliament-grom-decorators (~> 0.17)
+  parliament-grom-decorators!
   parliament-ntriple (~> 0.2)
-  parliament-routes (~> 0.6)
+  parliament-routes!
   parliament-ruby (~> 0.8)
   parliament-utils (~> 0.6)
   pugin (~> 1.6)
@@ -339,4 +347,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

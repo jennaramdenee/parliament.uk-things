@@ -1,27 +1,33 @@
 .section--primary
   .container--offset
     %h1= @collection.name
+    %p= @collection.description
 
 %section#content{ tabindex: "0" }
   .container
 
-    %ul.list--pipe
+    - if @collection.subcollections.any?
       %h2= "Collections in this Collection"
-      - @collection.subcollections.each do |subcollection|
-        %li
-          .list--details
-            = link_to(subcollection.name, collection_path(subcollection.graph_id))
-            %p= subcollection.description
+      %ul.list--block__inline-50
+        - @collection.subcollections.each do |subcollection|
+          %li
+            .list--details
+              = link_to(subcollection.name, collection_path(subcollection.graph_id))
+              %p= subcollection.description
 
+    - if @collection.parents.any?
       %h2= "Collections this Collection belongs to"
-      - @collection.parents.each do |parent|
-        %li
-          .list--details
-            = link_to(parent.name, collection_path(parent.graph_id))
-            %p= parent.description
+      %ul.list--block__inline-50
+        - @collection.parents.each do |parent|
+          %li
+            .list--details
+              = link_to(parent.name, collection_path(parent.graph_id))
+              %p= parent.description
 
+    - if @collection.articles.any?
       %h2= "Articles in this Collection"
-      - @collection.articles.each do |article|
-        %li
-          .list--details
-            = link_to(article.article_title, article_path(article.graph_id))
+      %ul.list--block__inline-50
+        - @collection.articles.each do |article|
+          %li
+            .list--details
+              = link_to(article.article_title, article_path(article.graph_id))

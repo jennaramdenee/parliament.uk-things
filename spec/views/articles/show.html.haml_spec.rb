@@ -11,17 +11,6 @@ RSpec.describe 'articles/show', vcr: true do
     )
   }
 
-  let!(:related_articles) {
-    assign(:related_articles,
-      [
-        double(:related_articles,
-          article_title: related_article_title_text,
-          graph_id:      '1234abcd'
-        )
-      ]
-    )
-  }
-
   let!(:collections) {
     assign(:collections,
       [
@@ -32,7 +21,7 @@ RSpec.describe 'articles/show', vcr: true do
           articles:    [
             double(:article2,
               article_title:    collection_article_title_text,
-              graph_id: 'gj7e0ikd'
+              graph_id:         'gj7e0ikd'
             )
           ]
         )
@@ -66,23 +55,15 @@ RSpec.describe 'articles/show', vcr: true do
         end
       end
 
-      context 'related articles' do
-        it 'displays the correct header' do
-          expect(rendered).to match(/Related Articles/)
-        end
-
-        it 'will render a link to related articles' do
-          expect(rendered).to match(/<a href="\/articles\/1234abcd">Related article title<\/a>/)
+      context 'collections' do
+        it 'will render a link to collections that article belongs to' do
+          expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
         end
       end
 
-      context 'collections' do
-        it 'displays the correct header' do
-          expect(rendered).to match(/Collections this article belongs to/)
-        end
-
-        it 'will render a link to collections that article belongs to' do
-          expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+      context 'collection articles' do
+        it 'will render a link to each article in that collection' do
+          expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
         end
       end
     end
@@ -109,15 +90,15 @@ RSpec.describe 'articles/show', vcr: true do
       end
     end
 
-    context 'related articles' do
-      it 'will render the sanitized related articles correctly' do
-        expect(rendered).to match(/<a href="\/articles\/1234abcd">Related article title<\/a>/)
-      end
-    end
-
     context 'collections' do
       it 'will render the collections correctly' do
         expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+      end
+    end
+
+    context 'collection articles' do
+      it 'will render a link to each article in that collection' do
+        expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
       end
     end
   end

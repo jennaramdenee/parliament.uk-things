@@ -686,11 +686,6 @@ en:
   places:
     all_regions: 'All Regions.'
     region_constituencies: 'Find constituencies by region.'
-  # article translations
-  articles:
-    show:
-      related_articles: 'Related Articles'
-      collection_articles: 'Collections this article belongs to'
   # collection translations
   collections:
     show:

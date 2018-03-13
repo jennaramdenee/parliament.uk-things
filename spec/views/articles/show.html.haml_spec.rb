@@ -62,6 +62,12 @@ RSpec.describe 'articles/show', vcr: true do
       it 'will render the article body correctly' do
         expect(rendered).to match(/<p><strong>This<\/strong> is an article body<\/p>/)
       end
+
+      context 'collection articles' do
+        it 'will render a link to each article in that collection' do
+          expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
+        end
+      end
     end
 
     context 'sanitize' do
@@ -95,6 +101,12 @@ RSpec.describe 'articles/show', vcr: true do
 
       it 'will render the sanitized link to collections correctly' do
         expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+      end
+    end
+
+    context 'collection articles' do
+      it 'will render a link to each article in that collection' do
+        expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
       end
     end
   end

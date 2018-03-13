@@ -1,0 +1,20 @@
+.container.flex--2__2-1
+  %article{ tabindex: '0', id: 'content' }
+    %header
+      %h1= sanitize collection.name
+
+    %div{ role: 'main' }
+      = MarkdownHelper.markdown(sanitize collection.description).html_safe
+
+  %aside
+    .block
+      %h2= 'In this section'
+      %ul.list--pipe
+        - collection.articles.each do |article|
+          %li
+            .list--details
+              = link_to(sanitize(article.article_title), article_path(article.graph_id))
+        - collection.subcollections.each do |subcollection|
+          %li
+            .list--details
+              = link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))

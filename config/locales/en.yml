@@ -688,7 +688,7 @@ en:
     region_constituencies: 'Find constituencies by region.'
   # collection translations
   collections:
-    show:
+    root_collection:
       in_this_section: 'In this section'
   # no content translations
   no_content:

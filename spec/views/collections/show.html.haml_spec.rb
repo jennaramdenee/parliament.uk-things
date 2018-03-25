@@ -5,7 +5,7 @@ RSpec.describe 'collections/show', vcr: true do
     assign(:subcollection,
       double(:subcollection,
         name:        subcollection_name_text,
-        graph_id:    'asdf1234'
+        graph_id:    'asdf1234',
       )
     )
   }
@@ -13,6 +13,7 @@ RSpec.describe 'collections/show', vcr: true do
     assign(:article,
       double(:article,
         article_title:   article_title_text,
+        article_summary: article_summary_text,
         graph_id:        'xoxoxox8'
       )
     )
@@ -24,7 +25,8 @@ RSpec.describe 'collections/show', vcr: true do
         name:           collection_name_text,
         description:    collection_description_text,
         subcollections: [subcollection],
-        articles:       [article]
+        articles:       [article],
+        parents:        []
       )
     )
   }
@@ -39,9 +41,10 @@ RSpec.describe 'collections/show', vcr: true do
     let!(:collection_description_text) { '**This** is a test description of a Collection.' }
     let!(:subcollection_name_text) { 'This is a test subcollection name' }
     let!(:article_title_text) { 'This is a test Title.' }
+    let!(:article_summary_text) { '**This** is an article summary' }
 
     context 'headings' do
-      it 'displays the correct header' do
+      it 'displays the correct header for the root collection' do
         expect(rendered).to match(/In this section/)
       end
     end
@@ -71,9 +74,10 @@ RSpec.describe 'collections/show', vcr: true do
 
   context 'sanitize' do
     let!(:collection_name_text) { '<script>This is a test Collection name.</script>' }
-    let!(:collection_description_text) { '<script>__This__ is a Collection descrpition</script>' }
+    let!(:collection_description_text) { '<script>__This__ is a Collection description</script>' }
     let!(:subcollection_name_text) { '<script>This is a test subcollection name.</script>' }
     let!(:article_title_text) { '<script>This is a test Title.</script>' }
+    let!(:article_summary_text) { '<script>__This__ is an article summary</script>' }
 
     context 'collection' do
       it 'name will render correctly' do
@@ -81,7 +85,7 @@ RSpec.describe 'collections/show', vcr: true do
       end
 
       it 'description will render correctly' do
-        expect(rendered).to match(/<p><strong>This<\/strong> is a Collection descrpition<\/p>/)
+        expect(rendered).to match(/<p><strong>This<\/strong> is a Collection description<\/p>/)
       end
     end
 

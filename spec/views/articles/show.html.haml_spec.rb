@@ -15,10 +15,11 @@ RSpec.describe 'articles/show', vcr: true do
     assign(:collections,
       [
         double(:collections,
-          name:        collection_name_text,
-          description: '**This** is a test description of a Collection.',
-          graph_id:    'h93dvh57',
-          articles:    [
+          name:           collection_name_text,
+          description:    '**This** is a test description of a Collection.',
+          graph_id:       'h93dvh57',
+          subcollections: [],
+          articles:       [
             double(:article2,
               article_title:    collection_article_title_text,
               graph_id:         'gj7e0ikd'

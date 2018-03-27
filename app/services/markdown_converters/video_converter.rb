@@ -20,9 +20,6 @@ module MarkdownConverter
       private
 
       def extract_video_links(markdown)
-        # regex = Regexp.union(/(\[video id:(\S{36})\])/, /start:(\S+) end:(\S+)/)
-        # markdown.scan(regex)
-        # markdown.scan(/(\[video id:(\S{36}) start:(\S+) end:(\S+)\])/)
         markdown.scan(/(\[video id:(\S{36})( start:(\S+) end:(\S+))?\])/)
 
       end

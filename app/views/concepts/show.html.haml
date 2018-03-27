@@ -4,7 +4,7 @@
 
 %section{ id: 'content', tabindex: "0" }
   .container--offset
-    = MarkdownHelper.markdown(@concept.definition)
+    = MarkdownHelper.markdown(sanitize(@concept.definition)).html_safe
 
     - if @concept_articles.any?
       %h2= "Articles in this section"

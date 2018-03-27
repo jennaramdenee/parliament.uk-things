@@ -48,5 +48,8 @@ module MembersPrototype
     config.action_view.field_error_proc = Proc.new { |html_tag, instance|
       html_tag
     }
+
+    config.action_view.sanitized_allowed_tags = ['iframe', 'allowfullscreen', 'seamless']
+
   end
 end

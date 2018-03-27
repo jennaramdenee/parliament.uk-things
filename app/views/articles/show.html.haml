@@ -2,7 +2,7 @@
   %article{ tabindex: '0', id: 'content' }
     %header
       - if @collections.any?
-        %p= WrappersHelper.render(@collections)
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
 
       %h1= sanitize(@article.title)
       = MarkdownHelper.markdown(sanitize(@article.article_summary)).html_safe
@@ -13,7 +13,7 @@
     - if @collections.any?
       %footer
         %h2= "Up to:"
-        %p= WrappersHelper.render(@collections)
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
 
   %aside
     - @collections.each do |collection|

@@ -2,7 +2,7 @@
   %article{ tabindex: '0', id: 'content' }
     %header
       - if collection.parents.any?
-        %p= WrappersHelper.render(collection.parents)
+        = render partial: "collections/delimited_links", locals: { collections: collection.parents }
 
       %h1= sanitize(collection.name)
 
@@ -12,7 +12,7 @@
     - if collection.parents.any?
       %footer
         %h2= "Up to:"
-        %p= WrappersHelper.render(collection.parents)
+        = render partial: "collections/delimited_links", locals: { collections: collection.parents }
 
   %aside
     %h2= sanitize(collection.name)

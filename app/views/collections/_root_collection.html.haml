@@ -3,7 +3,7 @@
     %h1= title(sanitize(collection.name))
     = MarkdownHelper.markdown(sanitize collection.description).html_safe
 
-%section#content{ tabindex: '0' }
+%section{ id: 'content', tabindex: '0' }
   .container
     %h2= t('.in_this_section')
     %ul.list--block__inline-50

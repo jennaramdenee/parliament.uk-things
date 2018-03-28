@@ -2,7 +2,7 @@
   .container--offset
     %h1= title(sanitize(@concept.name))
 
-%section#content{ tabindex: "0" }
+%section{ id: 'content', tabindex: "0" }
   .container--offset
     = MarkdownHelper.markdown(sanitize(@concept.definition)).html_safe
 

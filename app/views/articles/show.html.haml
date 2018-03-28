@@ -6,20 +6,20 @@
 
     %div{ role: 'main' }
       = MarkdownHelper.markdown(sanitize @article.article_body).html_safe
-      = "Up to:"
-      - @collections.each do |collection|
-        = link_to(sanitize(collection.name), collection_path(collection.graph_id))
+      -# = "Up to:"
+      -# - @collections.each do |collection|
+      -#   = link_to(sanitize(collection.name), collection_path(collection.graph_id))
 
-  %aside
-    .block
-      - @collections.each do |collection|
-        %h2= sanitize(collection.name)
-        %ul.list--pipe
-          - collection.articles.each do |article|
-            %li
-              .list--details
-                = link_to(sanitize(article.article_title), article_path(article.graph_id))
-          - collection.subcollections.each do |subcollection|
-            %li
-              .list--details
-                = link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))
+  -# %aside
+  -#   .block
+  -#     - @collections.each do |collection|
+  -#       %h2= sanitize(collection.name)
+  -#       %ul.list--pipe
+  -#         - collection.articles.each do |article|
+  -#           %li
+  -#             .list--details
+  -#               = link_to(sanitize(article.article_title), article_path(article.graph_id))
+  -#         - collection.subcollections.each do |subcollection|
+  -#           %li
+  -#             .list--details
+  -#               = link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))

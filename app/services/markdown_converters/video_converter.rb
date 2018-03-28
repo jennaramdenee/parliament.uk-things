@@ -36,6 +36,3 @@ module MarkdownConverter
     end
   end
 end
-
-
-# (\[video id:(\S{36}) start:(\S+) end:(\S+)\]) | (\[video id:(\S{36})\])

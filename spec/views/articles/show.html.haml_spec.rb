@@ -63,10 +63,8 @@ RSpec.describe 'articles/show', vcr: true do
         expect(rendered).to match(/<p><strong>This<\/strong> is an article body<\/p>/)
       end
 
-      context 'collection articles' do
-        it 'will render a link to each article in that collection' do
-          expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
-        end
+      it 'will render the article body correctly' do
+        expect(rendered).to match(/<p><strong>This<\/strong> is an article body<\/p>/)
       end
     end
 
@@ -103,10 +101,68 @@ RSpec.describe 'articles/show', vcr: true do
         expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
       end
     end
+  end
 
-    context 'collection articles' do
+  context 'collection articles' do
+    context 'converted to HTML' do
       it 'will render a link to each article in that collection' do
         expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
+      end
+    end
+
+    context 'sanitize' do
+      let!(:collection_article_title_text) { '<script>Another article title</script>' }
+      it 'will render the sanitized link to each article in that collection' do
+        expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
+      end
+    end
+  end
+
+  context 'collection subcollections' do
+    context 'converted to HTML' do
+      it 'will render a link to each subcollection in that collection' do
+        expect(rendered).to match(/<a href="\/collections\/asdf1234">Test Subcollection<\/a>/)
+      end
+    end
+
+    context 'sanitize' do
+      let!(:subcollection_name_text) { '<script>Test Subcollection</script>' }
+      it 'will render the sanitized link to each subcollection in that collection' do
+        expect(rendered).to match(/<a href="\/collections\/asdf1234">Test Subcollection<\/a>/)
+      end
+    end
+  end
+
+  context 'partials' do
+    context 'when collections exist' do
+      it 'will render the collections/delimited_links partial' do
+        expect(response).to render_template(partial: 'collections/_delimited_links')
+      end
+    end
+
+    context 'when collections do not exist' do
+      let!(:collections) {
+        assign(:collections, [])
+      }
+      it 'will not render the collections/delimited_links partial' do
+        expect(response).not_to render_template(partial: 'collections/_delimited_links')
+      end
+    end
+  end
+
+  context 'footer' do
+    context 'when collections exist' do
+      it "will render 'up to' text" do
+        expect(rendered).to match(/Up to/)
+      end
+    end
+
+    context 'when collections do not exist' do
+      let!(:collections) {
+        assign(:collections, [])
+      }
+      it "will not render 'up to' text" do
+        expect(rendered).not_to match(/Up to/)
       end
     end
   end

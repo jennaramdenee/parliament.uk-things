@@ -20,13 +20,12 @@ module MarkdownConverter
       private
 
       def extract_video_links(markdown)
-        markdown.scan(/(\[video id:(\S{36})( start:(\S+) end:(\S+))?\])/)
-
+        markdown.scan(/(https:\/\/parliamentlive.tv\/event\/index\/(\S{36})(\?in=(\S{8})\&out=(\S{8}))?)/)
       end
 
       def create_video_html(id, start_time = nil, end_time = nil)
         video_html_string = "<iframe src='https://videoplayback.parliamentlive.tv/Player/Index/#{id}?"
-        video_html_string += "in=1900-01-01T#{encode_video_times(start_time)}%2B01%3A00&amp;out=1900-01-01T#{encode_video_times(end_time)}2B01%3A00&amp;" if start_time && end_time
+        video_html_string += "in=1900-01-01T#{encode_video_times(start_time)}%2B00%3A00&amp;out=1900-01-01T#{encode_video_times(end_time)}%2B00%3A00&amp;" if start_time && end_time
         video_html_string += "audioOnly=False&amp;autoStart=False&amp;statsEnabled=False' id='UKPPlayer' name='UKPPlayer' title='UK Parliament Player' seamless='seamless' frameborder='0' allowfullscreen style='width:100%;height:100%;'></iframe>"
       end
 

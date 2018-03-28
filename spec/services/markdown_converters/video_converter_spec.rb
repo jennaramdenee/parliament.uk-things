@@ -24,11 +24,11 @@ RSpec.describe MarkdownConverter::VideoConverter do
       it 'can extract video links' do
         expect(MarkdownConverter::VideoConverter.send(:extract_video_links, original_article.article_body)).to include(
           [
-            "https://parliamentlive.tv/event/index/1b5736b4-7c93-4827-a02f-abbf0bb36cc8?in=12:00:00&out=13:00:00",
-            "1b5736b4-7c93-4827-a02f-abbf0bb36cc8",
-            "?in=12:00:00&out=13:00:00",
-            "12:00:00",
-            "13:00:00"
+            'https://parliamentlive.tv/event/index/1b5736b4-7c93-4827-a02f-abbf0bb36cc8?in=12:00:00&out=13:00:00',
+            '1b5736b4-7c93-4827-a02f-abbf0bb36cc8',
+            '?in=12:00:00&out=13:00:00',
+            '12:00:00',
+            '13:00:00'
           ]
         )
       end
@@ -38,11 +38,25 @@ RSpec.describe MarkdownConverter::VideoConverter do
       it 'can extract video links' do
         expect(MarkdownConverter::VideoConverter.send(:extract_video_links, original_article.article_body)).to include(
           [
-            "https://parliamentlive.tv/event/index/bf2334ce-e87f-4224-9a81-9a0e9886f19b",
-            "bf2334ce-e87f-4224-9a81-9a0e9886f19b",
-            nil,
+            'https://parliamentlive.tv/event/index/bf2334ce-e87f-4224-9a81-9a0e9886f19b ',
+            'bf2334ce-e87f-4224-9a81-9a0e9886f19b',
+            ' ',
             nil,
             nil
+          ]
+        )
+      end
+    end
+
+    context 'with invalid ID' do
+      it 'does not extract video links' do
+        expect(MarkdownConverter::VideoConverter.send(:extract_video_links, original_article.article_body)).not_to include(
+          [
+            'https://parliamentlive.tv/event/index/1b5736b4-7c93-4827-a02f-abbf0bb36cc8-ghbhfh45-ygk?in=12:00:00&out=13:00:00',
+            '1b5736b4-7c93-4827-a02f-abbf0bb36cc8-ghbhfh45-ygk',
+            '?in=12:00:00&out=13:00:00',
+            '12:00:00',
+            '13:00:00'
           ]
         )
       end

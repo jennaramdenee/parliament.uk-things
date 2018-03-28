@@ -1,12 +1,12 @@
 require 'cgi'
 
-module MarkdownConverter
-  class VideoConverter
+class MarkdownConverter
+  class VideoConverter < MarkdownConverter
     class << self
       def convert(markdown)
         video_links_array = extract_video_links(markdown)
         video_links_array.each do |video_link|
-          original_video_link = video_link[0]
+          original_video_link = video_link[0].strip
           id = video_link[1]
           start_time = video_link[3]
           end_time = video_link[4]
@@ -20,7 +20,8 @@ module MarkdownConverter
       private
 
       def extract_video_links(markdown)
-        markdown.scan(/(https:\/\/parliamentlive.tv\/event\/index\/(\S{36})(\?in=(\S{8})\&out=(\S{8}))?)/)
+        # Looks for URLs from Parliament Live TV
+        markdown.scan(/(https:\/\/parliamentlive.tv\/event\/index\/(\S{36})(\s|\?in=(\S{8})\&out=(\S{8})))/)
       end
 
       def create_video_html(id, start_time = nil, end_time = nil)

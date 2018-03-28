@@ -1,25 +1,30 @@
 .container.flex--2__2-1
   %article{ tabindex: '0', id: 'content' }
     %header
-      %h1= sanitize @article.title
-      = MarkdownHelper.markdown(sanitize @article.article_summary).html_safe
+      - if @collections.any?
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
+
+      %h1= sanitize(@article.title)
+      = MarkdownHelper.markdown(sanitize(@article.article_summary)).html_safe
 
     %div{ role: 'main' }
-      = MarkdownHelper.markdown(sanitize @article.article_body).html_safe
-      -# = "Up to:"
-      -# - @collections.each do |collection|
-      -#   = link_to(sanitize(collection.name), collection_path(collection.graph_id))
+      = MarkdownHelper.markdown(sanitize(@article.article_body)).html_safe
 
-  -# %aside
-  -#   .block
-  -#     - @collections.each do |collection|
-  -#       %h2= sanitize(collection.name)
-  -#       %ul.list--pipe
-  -#         - collection.articles.each do |article|
-  -#           %li
-  -#             .list--details
-  -#               = link_to(sanitize(article.article_title), article_path(article.graph_id))
-  -#         - collection.subcollections.each do |subcollection|
-  -#           %li
-  -#             .list--details
-  -#               = link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))
+    - if @collections.any?
+      %footer
+        %h2= "Up to:"
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
+
+  %aside
+    - @collections.each do |collection|
+      %h2= sanitize(collection.name)
+      .block
+        %ul.list--pipe
+          - collection.articles.each do |article|
+            %li
+              .list--details
+                = link_to(sanitize(article.article_title), article_path(article.graph_id))
+          - collection.subcollections.each do |subcollection|
+            %li
+              .list--details
+                = link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))

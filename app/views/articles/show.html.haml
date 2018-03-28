@@ -1,19 +1,24 @@
 .container.flex--2__2-1
   %article{ tabindex: '0', id: 'content' }
     %header
-      %h1= sanitize @article.title
-      = MarkdownHelper.markdown(sanitize @article.article_summary).html_safe
+      - if @collections.any?
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
+
+      %h1= sanitize(@article.title)
+      = MarkdownHelper.markdown(sanitize(@article.article_summary)).html_safe
 
     %div{ role: 'main' }
-      = MarkdownHelper.markdown(sanitize @article.article_body).html_safe
-      = "Up to:"
-      - @collections.each do |collection|
-        = link_to(sanitize(collection.name), collection_path(collection.graph_id))
+      = MarkdownHelper.markdown(sanitize(@article.article_body)).html_safe
+
+    - if @collections.any?
+      %footer
+        %h2= "Up to:"
+        = render partial: "collections/delimited_links", locals: { collections: @collections }
 
   %aside
-    .block
-      - @collections.each do |collection|
-        %h2= sanitize(collection.name)
+    - @collections.each do |collection|
+      %h2= sanitize(collection.name)
+      .block
         %ul.list--pipe
           - collection.articles.each do |article|
             %li

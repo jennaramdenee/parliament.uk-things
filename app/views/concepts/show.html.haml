@@ -1,6 +1,6 @@
 .section--primary
   .container--offset
-    %h1= sanitize(@concept.name)
+    %h1= title(sanitize(@concept.name))
 
 %section#content{ tabindex: "0" }
   .container--offset

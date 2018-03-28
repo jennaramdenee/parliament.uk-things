@@ -4,7 +4,7 @@
       - if @collections.any?
         = render partial: "collections/delimited_links", locals: { collections: @collections }
 
-      %h1= sanitize(@article.title)
+      %h1= title(sanitize(@article.title))
       = MarkdownHelper.markdown(sanitize(@article.article_summary)).html_safe
 
     %div{ role: 'main' }
@@ -12,7 +12,7 @@
 
     - if @collections.any?
       %footer
-        %h2= "Up to:"
+        %h2= t('.up_to')
         = render partial: "collections/delimited_links", locals: { collections: @collections }
 
   %aside

@@ -690,6 +690,10 @@ en:
   collections:
     root_collection:
       in_this_section: 'In this section'
+  # article translations
+  articles:
+    show:
+      up_to: 'Up to:'
   # no content translations
   no_content:
     empty_list:

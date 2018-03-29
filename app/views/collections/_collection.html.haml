@@ -3,7 +3,7 @@
     %article{ id: 'content', tabindex: '0' }
       %header
         - if collection.parents.any?
-          = render partial: "collections/delimited_links", locals: { collections: collection.parents }
+          = render partial: 'collections/delimited_links', locals: { collections: collection.parents }
 
         %h1= title(sanitize(collection.name))
 
@@ -12,8 +12,8 @@
 
       - if collection.parents.any?
         %footer
-          %h2= "Up to:"
-          = render partial: "collections/delimited_links", locals: { collections: collection.parents }
+          %h2= t('.up_to')
+          = render partial: 'collections/delimited_links', locals: { collections: collection.parents }
 
     %aside
       %h2= sanitize(collection.name)

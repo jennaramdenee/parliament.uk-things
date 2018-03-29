@@ -722,6 +722,8 @@ en:
   collections:
     root_collection:
       in_this_section: 'In this section'
+    collection:
+      up_to: 'Up to:'
   # article translations
   articles:
     show:

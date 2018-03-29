@@ -49,7 +49,28 @@ module MembersPrototype
       html_tag
     }
 
-    config.action_view.sanitized_allowed_tags = ['iframe', 'allowfullscreen', 'seamless', 'a']
+    config.action_view.sanitized_allowed_tags = [
+      'iframe',
+      'a',
+      'p',
+      'h1',
+      'h2',
+      'div',
+      'strong',
+      'em'
+    ]
+
+    config.action_view.sanitized_allowed_attributes = [
+      'href',
+      'src',
+      'name',
+      'title',
+      'allowfullscreen',
+      'style',
+      'seamless',
+      'frameborder',
+      'class'
+    ]
 
   end
 end

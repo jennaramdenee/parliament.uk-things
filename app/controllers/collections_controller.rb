@@ -2,7 +2,7 @@ class CollectionsController < ApplicationController
   before_action :data_check, :build_request, :disable_top_navigation
 
   ROUTE_MAP = {
-    show:  proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.collection_by_id.set_url_params({ collection_id: params[:collection_id] }) }
+    show: proc { |params| Parliament::Utils::Helpers::ParliamentHelper.parliament_request.collection_by_id.set_url_params({ collection_id: params[:collection_id] }) }
   }.freeze
 
   def show
@@ -15,5 +15,7 @@ class CollectionsController < ApplicationController
     @collection = collections.find { |collection| collection.graph_id == params[:collection_id] }
     raise ActionController::RoutingError, 'Collection Not Found' unless @collection
 
+    # Find root collections, which are last in a collection tree
+    @root_collections = @collection.collections_paths.map(&:last)
   end
 end

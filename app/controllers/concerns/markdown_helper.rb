@@ -1,4 +1,7 @@
+require_relative '../../services/markdown_converter'
+
 module MarkdownHelper
+
   # Uses redcarpet gem to convert markdown into HTML, with chosen HTML extensions
   #
   # @return template [String] Template as HTML

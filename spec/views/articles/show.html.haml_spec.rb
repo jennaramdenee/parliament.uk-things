@@ -14,8 +14,8 @@ RSpec.describe 'articles/show', vcr: true do
   let!(:subcollection) {
     assign(:subcollection,
       double(:subcollection,
-        name:        subcollection_name_text,
-        graph_id:    'asdf1234',
+        name:     subcollection_name_text,
+        graph_id: 'asdf1234',
       )
     )
   }
@@ -48,6 +48,7 @@ RSpec.describe 'articles/show', vcr: true do
   let!(:collection_name_text)          { 'This is a test Collection.' }
   let!(:collection_article_title_text) { 'Another article title' }
   let!(:subcollection_name_text)       { 'Test Subcollection' }
+  let!(:parent_collection_name_text)   { 'Test Parent Collection' }
 
   before(:each) do
     render
@@ -87,18 +88,36 @@ RSpec.describe 'articles/show', vcr: true do
   end
 
   context 'collections' do
-    context 'converted to HTML' do
-      it 'will render a link to collections that article belongs to' do
-        expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+    context 'when they exist' do
+      context 'converted to HTML' do
+        it 'will render a link to collections that article belongs to' do
+          expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+        end
+      end
+
+      context 'sanitize' do
+        let!(:collection_name_text)          { '<script>This is a test Collection.</script>' }
+        let!(:collection_article_title_text) { '<script>Another article title</script>' }
+
+        it 'will render the sanitized link to collections correctly' do
+          expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+        end
+      end
+
+      context 'rendered as a list of links' do
+        it "will render 'up to' text" do
+          expect(rendered).to match(/In:/)
+        end
       end
     end
 
-    context 'sanitize' do
-      let!(:collection_name_text)          { '<script>This is a test Collection.</script>' }
-      let!(:collection_article_title_text) { '<script>Another article title</script>' }
+    context 'when they do not exist' do
+      let!(:collections) {
+        assign(:collections, [])
+      }
 
-      it 'will render the sanitized link to collections correctly' do
-        expect(rendered).to match(/<a href="\/collections\/h93dvh57">This is a test Collection.<\/a>/)
+      it "will not render 'up to' text" do
+        expect(rendered).not_to match(/In:/)
       end
     end
   end
@@ -144,7 +163,7 @@ RSpec.describe 'articles/show', vcr: true do
       let!(:collections) {
         assign(:collections, [])
       }
-      
+
       it 'will not render the collections/delimited_links partial' do
         expect(response).not_to render_template(partial: 'collections/_delimited_links')
       end

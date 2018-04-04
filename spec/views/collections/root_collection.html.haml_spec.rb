@@ -24,21 +24,21 @@ RSpec.describe 'collections/_root_collection' do
   let!(:collection) {
     assign(:collection,
       double(:collection,
-        name:                 collection_name_text,
-        extended_description: collection_extended_description_text,
-        subcollections:       [subcollection],
-        articles:             [article],
-        parents:              []
+        name:           collection_name_text,
+        description:    collection_description_text,
+        subcollections: [subcollection],
+        articles:       [article],
+        parents:        []
       )
     )
   }
 
-  let!(:collection_name_text)                 { 'This is a test Collection.' }
-  let!(:collection_extended_description_text) { '__This__ is an extended test description of a Collection.' }
-  let!(:subcollection_name_text)              { 'This is a test subcollection name' }
-  let!(:subcollection_description_text)       { 'This is a test subcollection description' }
-  let!(:article_title_text)                   { 'This is a test Title.' }
-  let!(:article_summary_text)                 { '**This** is an article summary' }
+  let!(:collection_name_text)           { 'This is a test Collection.' }
+  let!(:collection_description_text)    { '__This__ is a test description of a Collection.' }
+  let!(:subcollection_name_text)        { 'This is a test subcollection name' }
+  let!(:subcollection_description_text) { 'This is a test subcollection description' }
+  let!(:article_title_text)             { 'This is a test Title.' }
+  let!(:article_summary_text)           { '**This** is an article summary' }
 
   before(:each) do
     render partial: "collections/root_collection", locals: { collection: collection }
@@ -51,20 +51,20 @@ RSpec.describe 'collections/_root_collection' do
       end
 
       it 'extended description will render correctly' do
-        expect(rendered).to match(/<p><strong>This<\/strong> is an extended test description of a Collection.<\/p>/)
+        expect(rendered).to match(/<p><strong>This<\/strong> is a test description of a Collection.<\/p>/)
       end
     end
 
     context 'sanitize' do
       let!(:collection_name_text) { '<script>This is a test Collection name.</script>' }
-      let!(:collection_extended_description_text) { '<script>**This** is an extended description</script>' }
+      let!(:collection_description_text) { '<script>**This** is a description</script>' }
 
       it 'sanitized name will render correctly' do
         expect(rendered).to match(/<h1>This is a test Collection name.<\/h1>/)
       end
 
       it 'sanitized extended description will render correctly' do
-        expect(rendered).to match(/<p><strong>This<\/strong> is an extended description<\/p>/)
+        expect(rendered).to match(/<p><strong>This<\/strong> is a description<\/p>/)
       end
     end
   end

@@ -1,7 +1,7 @@
 .section--primary
   .container--offset
     %h1= title(sanitize(collection.name))
-    = MarkdownHelper.markdown(collection.extended_description)
+    = MarkdownHelper.markdown(collection.description)
 
 %section{ id: 'content', tabindex: '0' }
   .container

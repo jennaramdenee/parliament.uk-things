@@ -722,10 +722,14 @@ en:
   collections:
     root_collection:
       in_this_section: 'In this section'
+    collection:
+      up_to: 'Up to:'
+      in: 'In:'
   # article translations
   articles:
     show:
       up_to: 'Up to:'
+      in: 'In:'
   # no content translations
   no_content:
     empty_list:

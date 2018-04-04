@@ -8,12 +8,16 @@
 
         %h1= title(sanitize(collection.name))
 
+        - if collection.parents.any?
+          = t('.in')
+          = render partial: "collections/delimited_links", locals: { collections: root_collections }
+
       %div{ role: 'main' }
-        = MarkdownHelper.markdown(collection.description)
+        = MarkdownHelper.markdown(collection.extended_description)
 
       - if collection.parents.any?
         %footer
-          %h2= "Up to:"
+          %h2= t('.up_to')
           = render partial: "collections/delimited_links", locals: { collections: collection.parents }
 
     %aside

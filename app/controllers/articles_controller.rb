@@ -19,9 +19,8 @@ class ArticlesController < ApplicationController
     @root_collections = []
 
     # GET request for each of those Collections
-    request = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.collection_by_id.set_url_params({ collection_id: collection.graph_id })
-
     @collections.each do |collection|
+      request = Parliament::Utils::Helpers::ParliamentHelper.parliament_request.collection_by_id.set_url_params({ collection_id: collection.graph_id })
       collections = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
         request,
         'http://example.com/content/schema/Collection'

@@ -1,7 +1,7 @@
 .section--primary
   .container--offset
     %h1= title(sanitize(collection.name))
-    = MarkdownHelper.markdown(collection.description)
+    = MarkdownHelper.markdown(collection.extended_description)
 
 %section{ id: 'content', tabindex: '0' }
   .container
@@ -17,3 +17,4 @@
         %li
           .list--details
             %h3= link_to(sanitize(subcollection.name), collection_path(subcollection.graph_id))
+            %p= sanitize(subcollection.description)

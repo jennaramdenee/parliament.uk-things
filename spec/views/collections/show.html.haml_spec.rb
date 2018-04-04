@@ -4,12 +4,13 @@ RSpec.describe 'collections/show', vcr: true do
   let!(:collection) {
     assign(:collection,
       double(:collection,
-        name:           'Test collection',
-        description:    'Test collection description',
-        graph_id:       'fghj76kl',
-        parents:        [parent_collection],
-        articles:       [],
-        subcollections: []
+        name:                 'Test collection',
+        description:          'Test collection description',
+        extended_description: 'Test extended description',
+        graph_id:             'fghj76kl',
+        parents:              [parent_collection],
+        articles:             [],
+        subcollections:       [],
       )
     )
   }
@@ -21,6 +22,10 @@ RSpec.describe 'collections/show', vcr: true do
         graph_id: 'v6v7b8b8'
       )
     )
+  }
+
+  let!(:root_collections){
+    assign(:root_collections, [])
   }
 
   before(:each) do
@@ -35,15 +40,16 @@ RSpec.describe 'collections/show', vcr: true do
     end
 
     context 'when a collection is the root (has no parents)' do
-      let!(:collection) {
+      let(:collection) {
         assign(:collection,
           double(:collection,
-            name:          'Test collection',
-            description:   'Test collection description',
-            graph_id:      'fghj76kl',
-            parents:       [],
-            articles:      [],
-            subcollections: []
+            name:                 'Test collection',
+            description:          'Test collection description',
+            extended_description: 'Test extended description',
+            graph_id:             'fghj76kl',
+            parents:              [],
+            articles:             [],
+            subcollections:       [],
           )
         )
       }

@@ -41,14 +41,18 @@ RSpec.describe 'collections/_collection' do
     )
   }
 
-  let!(:collection_name_text) { 'This is a test Collection.' }
+  let!(:root_collections){
+    assign(:root_collections, [])
+  }
+
+  let!(:collection_name_text)        { 'This is a test Collection.' }
   let!(:collection_description_text) { '**This** is a test description of a Collection.' }
-  let!(:subcollection_name_text) { 'This is a test subcollection name' }
-  let!(:article_title_text) { 'This is a test Title.' }
-  let!(:article_summary_text) { '**This** is an article summary' }
+  let!(:subcollection_name_text)     { 'This is a test subcollection name' }
+  let!(:article_title_text)          { 'This is a test Title.' }
+  let!(:article_summary_text)        { '**This** is an article summary' }
 
   before(:each) do
-    render partial: "collections/collection", locals: { collection: collection }
+    render partial: "collections/collection", locals: { collection: collection, root_collections: root_collections }
   end
 
   context 'collection' do
@@ -110,13 +114,35 @@ RSpec.describe 'collections/_collection' do
   end
 
   context 'partials' do
-    context 'when parent collections exist' do
+    context 'when parent collections exist but root collections do not exist' do
       it 'will render the collections/delimited_links partial' do
         expect(response).to render_template(partial: 'collections/_delimited_links')
       end
     end
 
-    context 'when parent collections do not exist' do
+    context 'when root collections exist but parent collections do not exist' do
+      let!(:root_collections) {
+        assign(:root_collections, [parent_collection])
+      }
+
+      let!(:collection) {
+        assign(:collection,
+          double(:collection,
+            name:           collection_name_text,
+            description:    collection_description_text,
+            subcollections: [],
+            articles:       [],
+            parents:        []
+          )
+        )
+      }
+
+      it 'will render the collections/delimited_links partial' do
+        expect(response).to render_template(partial: 'collections/_delimited_links')
+      end
+    end
+
+    context 'when parent collections do not exist and root collections do not exist' do
       let!(:collection) {
         assign(:collection,
           double(:collection,

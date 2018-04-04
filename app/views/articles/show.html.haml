@@ -19,7 +19,7 @@
 
     %aside
       - @collections.each do |collection|
-        %h2= sanitize(collection.name)
+        %h2= link_to(sanitize(collection.name), collection_path(collection.graph_id))
         .block
           %ul.list--pipe
             - collection.articles.each do |article|

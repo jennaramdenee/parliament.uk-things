@@ -6,7 +6,8 @@ RSpec.describe 'articles/show', vcr: true do
       double(:article,
         title:           article_title_text,
         article_summary: '## This is a test summary.',
-        article_body:    article_body_text
+        article_body:    article_body_text,
+        graph_id:        article_graph_id
       )
     )
   }
@@ -29,6 +30,10 @@ RSpec.describe 'articles/show', vcr: true do
           graph_id:       'h93dvh57',
           subcollections: [subcollection],
           articles:       [
+            double(:article,
+              article_title:           article_title_text,
+              graph_id:        article_graph_id
+            ),
             double(:article2,
               article_title:    collection_article_title_text,
               graph_id:         'gj7e0ikd'
@@ -43,6 +48,7 @@ RSpec.describe 'articles/show', vcr: true do
     assign(:root_collections, [])
   }
 
+  let!(:article_graph_id)              { 'a3d21x98' }
   let!(:article_title_text)            { 'This is a test Title.' }
   let!(:article_body_text)             { '__This__ is an article body' }
   let!(:collection_name_text)          { 'This is a test Collection.' }
@@ -126,6 +132,14 @@ RSpec.describe 'articles/show', vcr: true do
     context 'converted to HTML' do
       it 'will render a link to each article in that collection' do
         expect(rendered).to match(/<a href="\/articles\/gj7e0ikd">Another article title<\/a>/)
+      end
+
+      it 'will not render a link to the active article in that collection' do
+        expect(rendered).to_not match(/<a href="\/articles\/a3d21x98">This is a test Title.<\/a>/)
+      end
+
+      it 'will use an active class for the list item containing the active article title' do
+        expect(rendered).to have_css("li.active .list--details", text: article_title_text)
       end
     end
 

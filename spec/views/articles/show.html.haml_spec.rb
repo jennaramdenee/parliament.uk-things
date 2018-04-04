@@ -39,6 +39,10 @@ RSpec.describe 'articles/show', vcr: true do
     )
   }
 
+  let!(:root_collections) {
+    assign(:root_collections, [])
+  }
+
   let!(:article_title_text)            { 'This is a test Title.' }
   let!(:article_body_text)             { '__This__ is an article body' }
   let!(:collection_name_text)          { 'This is a test Collection.' }
@@ -130,18 +134,33 @@ RSpec.describe 'articles/show', vcr: true do
   end
 
   context 'partials' do
-    context 'when collections exist' do
+    context 'when collections exist and root collections do not exist' do
       it 'will render the collections/delimited_links partial' do
         expect(response).to render_template(partial: 'collections/_delimited_links')
       end
     end
 
-    context 'when collections do not exist' do
+    context 'when collections do not exist and root collections do not exist' do
       let!(:collections) {
         assign(:collections, [])
       }
+      
       it 'will not render the collections/delimited_links partial' do
         expect(response).not_to render_template(partial: 'collections/_delimited_links')
+      end
+    end
+
+    context 'when collections do not exist and root collections do' do
+      let!(:collections) {
+        assign(:collections, [])
+      }
+
+      let!(:root_collections) {
+        assign(:root_collections, [subcollection])
+      }
+
+      it 'will render the collections/delimited_links partial' do
+        expect(response).to render_template(partial: 'collections/_delimited_links')
       end
     end
   end

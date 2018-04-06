@@ -23,11 +23,11 @@ RSpec.describe 'collections/_collection' do
   let!(:collection) {
     assign(:collection,
       double(:collection,
-        name:                 collection_name_text,
-        extended_description: collection_extended_description_text,
-        subcollections:       [subcollection],
-        articles:             [article],
-        parents:              [parent_collection]
+        name:           collection_name_text,
+        description:    collection_description_text,
+        subcollections: [subcollection],
+        articles:       [article],
+        parents:        [parent_collection]
       )
     )
   }
@@ -41,18 +41,14 @@ RSpec.describe 'collections/_collection' do
     )
   }
 
-  let!(:root_collections){
-    assign(:root_collections, [])
-  }
-
-  let!(:collection_name_text)                 { 'This is a test Collection.' }
-  let!(:collection_extended_description_text) { '**This** is a test extended description of a Collection.' }
-  let!(:subcollection_name_text)              { 'This is a test subcollection name' }
-  let!(:article_title_text)                   { 'This is a test Title.' }
-  let!(:article_summary_text)                 { '**This** is an article summary' }
+  let!(:collection_name_text)        { 'This is a test Collection.' }
+  let!(:collection_description_text) { '**This** is a test extended description of a Collection.' }
+  let!(:subcollection_name_text)     { 'This is a test subcollection name' }
+  let!(:article_title_text)          { 'This is a test Title.' }
+  let!(:article_summary_text)        { '**This** is an article summary' }
 
   before(:each) do
-    render partial: "collections/collection", locals: { collection: collection, root_collections: root_collections }
+    render partial: "collections/collection", locals: { collection: collection }
   end
 
   context 'collection' do
@@ -67,8 +63,8 @@ RSpec.describe 'collections/_collection' do
     end
 
     context 'sanitize' do
-      let!(:collection_name_text)                 { '<script>This is a test Collection name.</script>' }
-      let!(:collection_extended_description_text) { '<script>__This__ is a Collection extended description</script>' }
+      let!(:collection_name_text)        { '<script>This is a test Collection name.</script>' }
+      let!(:collection_description_text) { '<script>__This__ is a Collection extended description</script>' }
 
       it 'sanitized name will render correctly' do
         expect(rendered).to match(/<h1>This is a test Collection name.<\/h1>/)
@@ -124,11 +120,11 @@ RSpec.describe 'collections/_collection' do
       let!(:collection) {
         assign(:collection,
           double(:collection,
-            name:                 collection_name_text,
-            extended_description: collection_extended_description_text,
-            subcollections:       [],
-            articles:             [],
-            parents:              []
+            name:           collection_name_text,
+            description:    collection_description_text,
+            subcollections: [],
+            articles:       [],
+            parents:        []
           )
         )
       }
@@ -139,43 +135,21 @@ RSpec.describe 'collections/_collection' do
   end
 
   context 'partials' do
-    context 'when parent collections exist but root collections do not exist' do
+    context 'when parent collections exist' do
       it 'will render the collections/delimited_links partial' do
         expect(response).to render_template(partial: 'collections/_delimited_links')
       end
     end
 
-    context 'when root collections exist but parent collections do not exist' do
-      let!(:root_collections) {
-        assign(:root_collections, [parent_collection])
-      }
-
+    context 'when parent collections do not exist' do
       let!(:collection) {
         assign(:collection,
           double(:collection,
-            name:                 collection_name_text,
-            extended_description: collection_extended_description_text,
-            subcollections:       [],
-            articles:             [],
-            parents:              []
-          )
-        )
-      }
-
-      it 'will render the collections/delimited_links partial' do
-        expect(response).to render_template(partial: 'collections/_delimited_links')
-      end
-    end
-
-    context 'when parent collections do not exist and root collections do not exist' do
-      let!(:collection) {
-        assign(:collection,
-          double(:collection,
-            name:                 collection_name_text,
-            extended_description: collection_extended_description_text,
-            subcollections:       [],
-            articles:             [],
-            parents:              []
+            name:           collection_name_text,
+            description:    collection_description_text,
+            subcollections: [],
+            articles:       [],
+            parents:        []
           )
         )
       }
@@ -197,11 +171,11 @@ RSpec.describe 'collections/_collection' do
       let!(:collection) {
         assign(:collection,
           double(:collection,
-            name:                 collection_name_text,
-            extended_description: collection_extended_description_text,
-            subcollections:       [],
-            articles:             [],
-            parents:              []
+            name:           collection_name_text,
+            description:    collection_description_text,
+            subcollections: [],
+            articles:       [],
+            parents:        []
           )
         )
       }

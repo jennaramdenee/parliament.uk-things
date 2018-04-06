@@ -44,10 +44,6 @@ RSpec.describe 'articles/show', vcr: true do
     )
   }
 
-  let!(:root_collections) {
-    assign(:root_collections, [])
-  }
-
   let!(:article_graph_id)              { 'a3d21x98' }
   let!(:article_title_text)            { 'This is a test Title.' }
   let!(:article_body_text)             { '__This__ is an article body' }
@@ -167,36 +163,21 @@ RSpec.describe 'articles/show', vcr: true do
   end
 
   context 'partials' do
-    context 'when collections exist and root collections do not exist' do
-      it 'will render the collections/delimited_links partial' do
-        expect(response).to render_template(partial: 'collections/_delimited_links')
+      context 'when collections exist' do
+        it 'will render the collections/delimited_links partial' do
+          expect(response).to render_template(partial: 'collections/_delimited_links')
+        end
+      end
+
+      context 'when collections do not exist' do
+        let!(:collections) {
+          assign(:collections, [])
+        }
+        it 'will not render the collections/delimited_links partial' do
+          expect(response).not_to render_template(partial: 'collections/_delimited_links')
+        end
       end
     end
-
-    context 'when collections do not exist and root collections do not exist' do
-      let!(:collections) {
-        assign(:collections, [])
-      }
-
-      it 'will not render the collections/delimited_links partial' do
-        expect(response).not_to render_template(partial: 'collections/_delimited_links')
-      end
-    end
-
-    context 'when collections do not exist and root collections do' do
-      let!(:collections) {
-        assign(:collections, [])
-      }
-
-      let!(:root_collections) {
-        assign(:root_collections, [subcollection])
-      }
-
-      it 'will render the collections/delimited_links partial' do
-        expect(response).to render_template(partial: 'collections/_delimited_links')
-      end
-    end
-  end
 
   context 'footer' do
     context 'when collections exist' do

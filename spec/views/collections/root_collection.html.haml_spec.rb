@@ -5,8 +5,7 @@ RSpec.describe 'collections/_root_collection' do
     assign(:subcollection,
       double(:subcollection,
         name:        subcollection_name_text,
-        description: subcollection_description_text,
-        graph_id:    'asdf1234',
+        graph_id:    'asdf1234'
       )
     )
   }
@@ -36,7 +35,6 @@ RSpec.describe 'collections/_root_collection' do
   let!(:collection_name_text)           { 'This is a test Collection.' }
   let!(:collection_description_text)    { '__This__ is a test description of a Collection.' }
   let!(:subcollection_name_text)        { 'This is a test subcollection name' }
-  let!(:subcollection_description_text) { 'This is a test subcollection description' }
   let!(:article_title_text)             { 'This is a test Title.' }
   let!(:article_summary_text)           { '**This** is an article summary' }
 
@@ -50,7 +48,7 @@ RSpec.describe 'collections/_root_collection' do
         expect(rendered).to match(/<h1>This is a test Collection.<\/h1>/)
       end
 
-      it 'extended description will render correctly' do
+      it 'description will render correctly' do
         expect(rendered).to match(/<p><strong>This<\/strong> is a test description of a Collection.<\/p>/)
       end
     end
@@ -63,7 +61,7 @@ RSpec.describe 'collections/_root_collection' do
         expect(rendered).to match(/<h1>This is a test Collection name.<\/h1>/)
       end
 
-      it 'sanitized extended description will render correctly' do
+      it 'sanitized description will render correctly' do
         expect(rendered).to match(/<p><strong>This<\/strong> is a description<\/p>/)
       end
     end
@@ -78,7 +76,6 @@ RSpec.describe 'collections/_root_collection' do
 
     context 'sanitize' do
       let!(:article_title_text) { '<script>This is a test Title.</script>' }
-      let!(:article_summary_text) { '<script>__This__ is an article summary</script>' }
 
       it 'will render the sanitized link to articles' do
         expect(rendered).to match(/<a href="\/articles\/xoxoxox8">This is a test Title.<\/a>/)
@@ -91,22 +88,13 @@ RSpec.describe 'collections/_root_collection' do
       it 'name will render correctly' do
         expect(rendered).to match(/<a href="\/collections\/asdf1234">This is a test subcollection name<\/a>/)
       end
-
-      it 'description will render correctly' do
-        expect(rendered).to match(/<p>This is a test subcollection description<\/p>/)
-      end
     end
 
     context 'sanitize' do
       let!(:subcollection_name_text)        { '<script>This is a test subcollection name.</script>' }
-      let!(:subcollection_description_text) { '<script>This is a test subcollection description.</script>' }
 
       it 'name will render correctly' do
         expect(rendered).to match(/<a href="\/collections\/asdf1234">This is a test subcollection name.<\/a>/)
-      end
-
-      it 'description will render correctly' do
-        expect(rendered).to match(/<p>This is a test subcollection description.<\/p>/)
       end
     end
   end

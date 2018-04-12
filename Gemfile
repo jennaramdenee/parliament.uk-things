@@ -17,7 +17,8 @@ gem 'haml'
 gem 'parliament-ruby', '1.0.0.pre6'
 
 # Parliament Grom Decorators decorates Grom nodes
-gem 'parliament-grom-decorators', '~> 0.24'
+gem 'parliament-grom-decorators', path: '../parliament-grom-decorators'
+# gem 'parliament-grom-decorators', '~> 0.23'
 
 # Converts GeoSparql to GeoJSON
 gem 'geosparql_to_geojson', '~> 0.2'

@@ -1,0 +1,16 @@
+.section--primary#content{ tabindex: "0" }
+  .container
+    %h1= title(@procedure.name)
+
+%section#content{ tabindex: "0" }
+  .container
+    %ul.list--block
+      - @work_packageable_things.each do |work_packageable_thing|
+        %li
+          .card
+            .card__details
+              -# Name of the work packageable thing, and link
+              %h2= link_to(work_packageable_thing.name, work_package_path(work_packageable_thing.graph_id))
+              -# Date of the oldest business item
+              - if work_packageable_thing.oldest_business_item_date
+                %p= "#{l(work_packageable_thing.oldest_business_item_date, format: :default)}"

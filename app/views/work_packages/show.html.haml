@@ -1,0 +1,32 @@
+.section--primary#content{ tabindex: "0" }
+  .container
+    %h1= title(@work_packageable_thing.name)
+
+    %h2= "About the whatever we decide to call this"
+    %ul
+      %li= "Subject to the #{@procedure.name.downcase} procedure"
+
+      - if @laying_business_item
+        %li= "Laid by the #{@laying_business_item.laying_body.name} on #{l(@laying_business_item.date, format: :default)}"
+
+      - unless @work_packageable_thing.web_link.empty?
+        = link_to(@work_packageable_thing.web_link) do
+          %li= "Read the whatever we decide to call this, its purpose and related information"
+
+    - if @completed_business_items.any?
+      %h2= 'Completed steps'
+      .track--alternative
+        - @completed_business_items.each do |completed_business_item|
+          = render partial: 'work_packages/business_item', locals: { business_item: completed_business_item }
+
+    - if @scheduled_business_items.any?
+      %h2= 'Scheduled steps'
+      .track--alternative
+        - @scheduled_business_items.each do |scheduled_business_item|
+          = render partial: 'work_packages/business_item', locals: { business_item: scheduled_business_item }
+
+    - if @business_items_with_no_date.any?
+      %h2= 'Steps with no date'
+      .track--alternative
+        - @business_items_with_no_date.each do |business_item_with_no_date|
+          = render partial: 'work_packages/business_item', locals: { business_item: business_item_with_no_date }

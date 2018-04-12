@@ -1,0 +1,1454 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3030/work_package_by_id?work_package_id=WDlhym6A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby
+      Accept:
+      - "*/*"
+      - application/n-triples
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '8102'
+      Content-Type:
+      - application/n-triples
+      Content-Encoding:
+      - gzip
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Fri, 18 May 2018 15:36:37 GMT
+    body:
+      encoding: UTF-8
+      string: "<https://id.parliament.uk/WDlhym6A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/WorkPackageableThing> .\r\n<https://id.parliament.uk/WDlhym6A>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/StatutoryInstrument>
+        .\r\n<https://id.parliament.uk/WDlhym6A> <https://id.parliament.uk/schema/workPackageableThingHasWorkPackage>
+        <https://id.parliament.uk/F7f4F0bp> .\r\n<https://id.parliament.uk/WDlhym6A>
+        <https://id.parliament.uk/schema/workPackageableThingName> \"workPackageableThingName
+        - 1\" .\r\n<https://id.parliament.uk/WDlhym6A> <https://id.parliament.uk/schema/workPackageableThingComingIntoForceDate>
+        \"2018-01-22+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/WDlhym6A>
+        <https://id.parliament.uk/schema/workPackageableThingHasWorkPackageableThingWebLink>
+        <http://www.legislation.gov.uk/uksi/2018/60/made> .\r\n<https://id.parliament.uk/WDlhym6A>
+        <https://id.parliament.uk/schema/statutoryInstrumentNumberPrefix> \"statutoryInstrumentNumberPrefix
+        - 1\" .\r\n<https://id.parliament.uk/WDlhym6A> <https://id.parliament.uk/schema/statutoryInstrumentNumber>
+        \"statutoryInstrumentNumber - 1\" .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/WorkPackage>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasProcedure>
+        <https://id.parliament.uk/H5YJQsK2> .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/67vIeIa9>
+        .\r\n<https://id.parliament.uk/H5YJQsK2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/Procedure> .\r\n<https://id.parliament.uk/H5YJQsK2>
+        <https://id.parliament.uk/schema/procedureName> \"procedureName - 1\" .\r\n<https://id.parliament.uk/67vIeIa9>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/67vIeIa9> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-02-20+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/67vIeIa9>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://hansard.parliament.uk/Lords/2018-02-20/debates/1847F2DA-FF8D-4807-ABA1-6F2D483BA3EC/AndreyLugovoyAndDmitriKovtunFreezingOrder2018#contribution-22B1B78C-4BB5-4274-822C-D66DBA8084CE>
+        .\r\n<https://id.parliament.uk/67vIeIa9> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/ORYEPBmc> .\r\n<https://id.parliament.uk/ORYEPBmc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/ORYEPBmc> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 1\" .\r\n<https://id.parliament.uk/ORYEPBmc> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/ORYEPBmc>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Y4YZieTe> .\r\n<https://id.parliament.uk/WkUWUBMx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/House>
+        .\r\n<https://id.parliament.uk/WkUWUBMx> <https://id.parliament.uk/schema/houseName>
+        \"houseName - 1\" .\r\n<https://id.parliament.uk/Y4YZieTe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/Y4YZieTe>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/Y4YZieTe> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/pX6JXPJ3> .\r\n<https://id.parliament.uk/pX6JXPJ3>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/pX6JXPJ3> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 2\" .\r\n<https://id.parliament.uk/ORYEPBmc> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/uZgXNTEa> .\r\n<https://id.parliament.uk/uZgXNTEa>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/uZgXNTEa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/uZgXNTEa>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/nVheFQgh>
+        .\r\n<https://id.parliament.uk/nVheFQgh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/nVheFQgh>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        3\" .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasProcedure>
+        <https://id.parliament.uk/iWugpxMn> .\r\n<https://id.parliament.uk/iWugpxMn>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/iWugpxMn> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 2\" .\r\n<https://id.parliament.uk/ORYEPBmc> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/A4c73UI1> .\r\n<https://id.parliament.uk/A4c73UI1>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/A4c73UI1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/A4c73UI1>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/nVheFQgh>
+        .\r\n<https://id.parliament.uk/ORYEPBmc> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/XlHRrq2P> .\r\n<https://id.parliament.uk/XlHRrq2P>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/XlHRrq2P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/XlHRrq2P>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/pX6JXPJ3>
+        .\r\n<https://id.parliament.uk/67vIeIa9> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/vOCSRhjw> .\r\n<https://id.parliament.uk/vOCSRhjw>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 4\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/vOCSRhjw>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/MRILjpzj> .\r\n<https://id.parliament.uk/vOCSRhjw>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/lfq8jz6U> .\r\n<https://id.parliament.uk/MRILjpzj>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/MRILjpzj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/MRILjpzj>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/ORYEPBmc>
+        .\r\n<https://id.parliament.uk/lfq8jz6U> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/lfq8jz6U>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/lfq8jz6U> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/lDpFMzex> .\r\n<https://id.parliament.uk/lDpFMzex>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/lDpFMzex> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 5\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/AYZTTX4m> .\r\n<https://id.parliament.uk/AYZTTX4m>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/AYZTTX4m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/AYZTTX4m>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sD2Tu3S7>
+        .\r\n<https://id.parliament.uk/sD2Tu3S7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/sD2Tu3S7>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        6\" .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasProcedure>
+        <https://id.parliament.uk/gTgidljI> .\r\n<https://id.parliament.uk/gTgidljI>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/gTgidljI> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 3\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/G3vLZD41> .\r\n<https://id.parliament.uk/G3vLZD41>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/G3vLZD41> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/G3vLZD41>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sD2Tu3S7>
+        .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/MkP5qOTt> .\r\n<https://id.parliament.uk/MkP5qOTt>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/MkP5qOTt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/MkP5qOTt>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/y6nv7EHW>
+        .\r\n<https://id.parliament.uk/y6nv7EHW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/y6nv7EHW>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        7\" .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasProcedure>
+        <https://id.parliament.uk/5S6p4YsP> .\r\n<https://id.parliament.uk/5S6p4YsP>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/5S6p4YsP> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 4\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/PrXNVS0N> .\r\n<https://id.parliament.uk/PrXNVS0N>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/PrXNVS0N> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/PrXNVS0N>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/RTCec2SF>
+        .\r\n<https://id.parliament.uk/RTCec2SF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/RTCec2SF>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        8\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/kPb2OiUv> .\r\n<https://id.parliament.uk/kPb2OiUv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/kPb2OiUv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/kPb2OiUv>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sD2Tu3S7>
+        .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/qUNOUhNL> .\r\n<https://id.parliament.uk/qUNOUhNL>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/qUNOUhNL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/qUNOUhNL>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/cLEFLsGp>
+        .\r\n<https://id.parliament.uk/cLEFLsGp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/cLEFLsGp>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        9\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/kKjIdKva> .\r\n<https://id.parliament.uk/kKjIdKva>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/kKjIdKva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/kKjIdKva>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Te5alY3F>
+        .\r\n<https://id.parliament.uk/Te5alY3F> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/Te5alY3F>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        10\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/rRN3uSHw> .\r\n<https://id.parliament.uk/rRN3uSHw>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/rRN3uSHw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/rRN3uSHw>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Te5alY3F>
+        .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Fb1AwCTo> .\r\n<https://id.parliament.uk/Fb1AwCTo>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Fb1AwCTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Fb1AwCTo>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/cLEFLsGp>
+        .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/9JhHbq56> .\r\n<https://id.parliament.uk/9JhHbq56>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/9JhHbq56> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/9JhHbq56>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Wn3APPzz>
+        .\r\n<https://id.parliament.uk/Wn3APPzz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/Wn3APPzz>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        11\" .\r\n<https://id.parliament.uk/vOCSRhjw> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/LW4BuBL7> .\r\n<https://id.parliament.uk/vOCSRhjw>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/IcL00Y3r> .\r\n<https://id.parliament.uk/LW4BuBL7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/LW4BuBL7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/LW4BuBL7>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/ORYEPBmc>
+        .\r\n<https://id.parliament.uk/IcL00Y3r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/IcL00Y3r>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/IcL00Y3r> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/Wn3APPzz> .\r\n<https://id.parliament.uk/vOCSRhjw>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/2o4nSyoK> .\r\n<https://id.parliament.uk/2o4nSyoK>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/2o4nSyoK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/2o4nSyoK>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/y6nv7EHW>
+        .\r\n<https://id.parliament.uk/67vIeIa9> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/nVheFQgh> .\r\n<https://id.parliament.uk/nVheFQgh>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/nVheFQgh> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/l9EEPoQp> .\r\n<https://id.parliament.uk/l9EEPoQp>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/l9EEPoQp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/l9EEPoQp>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FYeLHMEw>
+        .\r\n<https://id.parliament.uk/FYeLHMEw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/FYeLHMEw>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        12\" .\r\n<https://id.parliament.uk/nVheFQgh> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/zr3nDwqV> .\r\n<https://id.parliament.uk/zr3nDwqV>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/zr3nDwqV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/zr3nDwqV>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FYeLHMEw>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/xCCGPwty> .\r\n<https://id.parliament.uk/xCCGPwty>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/xCCGPwty> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-02-20+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/xCCGPwty>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://hansard.parliament.uk/Commons/2018-02-20/debates/8DBD3048-1A1D-4843-9A9F-99AF7DE70C7C/DelegatedLegislation>
+        .\r\n<https://id.parliament.uk/xCCGPwty> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/nveorPPO> .\r\n<https://id.parliament.uk/nveorPPO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/nveorPPO> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 13\" .\r\n<https://id.parliament.uk/nveorPPO> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/nveorPPO>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/rFlDgShR> .\r\n<https://id.parliament.uk/1AFu55Hs>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/House>
+        .\r\n<https://id.parliament.uk/1AFu55Hs> <https://id.parliament.uk/schema/houseName>
+        \"houseName - 2\" .\r\n<https://id.parliament.uk/rFlDgShR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/rFlDgShR>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/rFlDgShR> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/9irs4N6L> .\r\n<https://id.parliament.uk/9irs4N6L>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/9irs4N6L> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 14\" .\r\n<https://id.parliament.uk/O5QdnmSL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/O5QdnmSL>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        15\" .\r\n<https://id.parliament.uk/nveorPPO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/T0bQyYAm> .\r\n<https://id.parliament.uk/T0bQyYAm>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/T0bQyYAm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/T0bQyYAm>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/9irs4N6L>
+        .\r\n<https://id.parliament.uk/nveorPPO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/vBt5JKdX> .\r\n<https://id.parliament.uk/vBt5JKdX>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/vBt5JKdX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/vBt5JKdX>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/dnWpdwUf>
+        .\r\n<https://id.parliament.uk/dnWpdwUf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/dnWpdwUf>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        16\" .\r\n<https://id.parliament.uk/nveorPPO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/vtyAjRLy> .\r\n<https://id.parliament.uk/vtyAjRLy>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/vtyAjRLy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/vtyAjRLy>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/dnWpdwUf>
+        .\r\n<https://id.parliament.uk/xCCGPwty> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/dnWpdwUf> .\r\n<https://id.parliament.uk/dnWpdwUf>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/1AFu55Hs>
+        .\r\n<https://id.parliament.uk/dnWpdwUf> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/wJEw2qcP> .\r\n<https://id.parliament.uk/wJEw2qcP>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/wJEw2qcP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/wJEw2qcP>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FYeLHMEw>
+        .\r\n<https://id.parliament.uk/dnWpdwUf> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/a7n9Qst9> .\r\n<https://id.parliament.uk/a7n9Qst9>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/a7n9Qst9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/a7n9Qst9>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FYeLHMEw>
+        .\r\n<https://id.parliament.uk/dnWpdwUf> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/1tJIrwxQ> .\r\n<https://id.parliament.uk/1tJIrwxQ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/1tJIrwxQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/dnWpdwUf>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/0u30b9S8> .\r\n<https://id.parliament.uk/0u30b9S8>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/0u30b9S8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/l0fUruCg>
+        .\r\n<https://id.parliament.uk/l0fUruCg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/BusinessItem> .\r\n<https://id.parliament.uk/l0fUruCg>
+        <https://id.parliament.uk/schema/businessItemDate> \"2018-01-30+00:00\"^^<http://www.w3.org/2001/XMLSchema#date>
+        .\r\n<https://id.parliament.uk/l0fUruCg> <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink>
+        <https://publications.parliament.uk/pa/ld201719/ldselect/ldsecleg/71/7105.htm>
+        .\r\n<https://id.parliament.uk/l0fUruCg> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/JcCYkCt7> .\r\n<https://id.parliament.uk/JcCYkCt7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 17\" .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/JcCYkCt7>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/FPg0cqPv> .\r\n<https://id.parliament.uk/FPg0cqPv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/FPg0cqPv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/FPg0cqPv>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Kn7FknDd>
+        .\r\n<https://id.parliament.uk/Kn7FknDd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/Kn7FknDd>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        18\" .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/vMJfZlZL> .\r\n<https://id.parliament.uk/vMJfZlZL>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/vMJfZlZL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/vMJfZlZL>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Kn7FknDd>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/dKjMFR97> .\r\n<https://id.parliament.uk/dKjMFR97>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/dKjMFR97> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/dKjMFR97>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/2Etk3rF5>
+        .\r\n<https://id.parliament.uk/2Etk3rF5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/2Etk3rF5>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        19\" .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/0UBZ2TZq> .\r\n<https://id.parliament.uk/0UBZ2TZq>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/0UBZ2TZq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/0UBZ2TZq>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Kn7FknDd>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/EMKf7Lie> .\r\n<https://id.parliament.uk/EMKf7Lie>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/EMKf7Lie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/EMKf7Lie>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/2Etk3rF5>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/STB5b7CO> .\r\n<https://id.parliament.uk/STB5b7CO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/STB5b7CO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/STB5b7CO>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/2Etk3rF5>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/1wEQ62KV> .\r\n<https://id.parliament.uk/1wEQ62KV>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/1wEQ62KV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/1wEQ62KV>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/2Etk3rF5>
+        .\r\n<https://id.parliament.uk/JcCYkCt7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/9DC2i4tH> .\r\n<https://id.parliament.uk/9DC2i4tH>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/9DC2i4tH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/9DC2i4tH>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Kn7FknDd>
+        .\r\n<https://id.parliament.uk/l0fUruCg> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/MUdsWgMn> .\r\n<https://id.parliament.uk/MUdsWgMn>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/MUdsWgMn> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 20\" .\r\n<https://id.parliament.uk/MUdsWgMn> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/MUdsWgMn>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/cPhfvvNo> .\r\n<https://id.parliament.uk/cPhfvvNo>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/cPhfvvNo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/cPhfvvNo>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/JcCYkCt7>
+        .\r\n<https://id.parliament.uk/MUdsWgMn> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/6N38q6MA> .\r\n<https://id.parliament.uk/6N38q6MA>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/6N38q6MA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/6N38q6MA>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/JcCYkCt7>
+        .\r\n<https://id.parliament.uk/l0fUruCg> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/2Etk3rF5> .\r\n<https://id.parliament.uk/2Etk3rF5>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/e5CCT70U> .\r\n<https://id.parliament.uk/e5CCT70U>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/e5CCT70U> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/e5CCT70U>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/mHLm3KY7>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/mHLm3KY7>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        21\" .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/FraCC9HO> .\r\n<https://id.parliament.uk/FraCC9HO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/FraCC9HO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/FraCC9HO>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/uwTqgHE3>
+        .\r\n<https://id.parliament.uk/uwTqgHE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/uwTqgHE3>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        22\" .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/PdPbyMqo> .\r\n<https://id.parliament.uk/PdPbyMqo>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/PdPbyMqo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/PdPbyMqo>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/bEzmXakv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/bEzmXakv>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        23\" .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/sexvstBX> .\r\n<https://id.parliament.uk/sexvstBX>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/sexvstBX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/sexvstBX>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/mHLm3KY7>
+        .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/zSV7QaLj> .\r\n<https://id.parliament.uk/zSV7QaLj>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/zSV7QaLj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/zSV7QaLj>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/2Etk3rF5> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/bdQyeig7> .\r\n<https://id.parliament.uk/bdQyeig7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/bdQyeig7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/bdQyeig7>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/uwTqgHE3>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/KLzfGm71> .\r\n<https://id.parliament.uk/KLzfGm71>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/KLzfGm71> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-01-30+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/KLzfGm71>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://publications.parliament.uk/pa/ld201719/ldselect/ldsecleg/71/7104.htm>
+        .\r\n<https://id.parliament.uk/KLzfGm71> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/qGFQ35jt> .\r\n<https://id.parliament.uk/qGFQ35jt>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 24\" .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/qGFQ35jt>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/BFkPDItW> .\r\n<https://id.parliament.uk/BFkPDItW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/BFkPDItW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/BFkPDItW>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/zBtshoXJ>
+        .\r\n<https://id.parliament.uk/zBtshoXJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/zBtshoXJ>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        25\" .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/0np96cvg> .\r\n<https://id.parliament.uk/0np96cvg>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/0np96cvg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/0np96cvg>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/lwlTPsiJ>
+        .\r\n<https://id.parliament.uk/lwlTPsiJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/lwlTPsiJ>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        26\" .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/lTXj2h9A> .\r\n<https://id.parliament.uk/lTXj2h9A>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/lTXj2h9A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/lTXj2h9A>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/zBtshoXJ>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Rrcb9jvI> .\r\n<https://id.parliament.uk/Rrcb9jvI>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Rrcb9jvI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Rrcb9jvI>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/lwlTPsiJ>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/UsRHG8L2> .\r\n<https://id.parliament.uk/UsRHG8L2>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/UsRHG8L2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/UsRHG8L2>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/lwlTPsiJ>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/9R98hZwM> .\r\n<https://id.parliament.uk/9R98hZwM>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/9R98hZwM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/9R98hZwM>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/zBtshoXJ>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/cWfJ6U4q> .\r\n<https://id.parliament.uk/cWfJ6U4q>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/cWfJ6U4q> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/cWfJ6U4q>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/lwlTPsiJ>
+        .\r\n<https://id.parliament.uk/qGFQ35jt> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/gdMwqIr0> .\r\n<https://id.parliament.uk/gdMwqIr0>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/gdMwqIr0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/gdMwqIr0>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/zBtshoXJ>
+        .\r\n<https://id.parliament.uk/KLzfGm71> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/zQrAQfxB> .\r\n<https://id.parliament.uk/zQrAQfxB>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/zQrAQfxB> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 27\" .\r\n<https://id.parliament.uk/zQrAQfxB> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/zQrAQfxB>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/skK7Rfb5> .\r\n<https://id.parliament.uk/skK7Rfb5>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/skK7Rfb5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/skK7Rfb5>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qGFQ35jt>
+        .\r\n<https://id.parliament.uk/zQrAQfxB> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/pHtBsJa4> .\r\n<https://id.parliament.uk/pHtBsJa4>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/pHtBsJa4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/pHtBsJa4>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qGFQ35jt>
+        .\r\n<https://id.parliament.uk/KLzfGm71> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/lwlTPsiJ> .\r\n<https://id.parliament.uk/lwlTPsiJ>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/1AFu55Hs>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/vgLniHaM> .\r\n<https://id.parliament.uk/vgLniHaM>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/vgLniHaM> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-01-22+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/vgLniHaM>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <http://www.legislation.gov.uk/uksi/2018/60/made>
+        .\r\n<https://id.parliament.uk/vgLniHaM> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/OM5fjnQ3> .\r\n<https://id.parliament.uk/OM5fjnQ3>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/OM5fjnQ3> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 28\" .\r\n<https://id.parliament.uk/OM5fjnQ3> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/OqsqWa6Y> .\r\n<https://id.parliament.uk/OqsqWa6Y>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/OqsqWa6Y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/OqsqWa6Y>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/NbKKmFjs>
+        .\r\n<https://id.parliament.uk/NbKKmFjs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/NbKKmFjs>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        29\" .\r\n<https://id.parliament.uk/OM5fjnQ3> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/IqVi69MJ> .\r\n<https://id.parliament.uk/IqVi69MJ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/IqVi69MJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/IqVi69MJ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/NbKKmFjs>
+        .\r\n<https://id.parliament.uk/OM5fjnQ3> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/3wWnNSGJ> .\r\n<https://id.parliament.uk/3wWnNSGJ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/3wWnNSGJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/3wWnNSGJ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/NbKKmFjs>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/nI9LkUv5> .\r\n<https://id.parliament.uk/nI9LkUv5>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/nI9LkUv5> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-01-31+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/nI9LkUv5>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://publications.parliament.uk/pa/jt201719/jtselect/jtstatin/72/7205.htm#_idTextAnchor029>
+        .\r\n<https://id.parliament.uk/nI9LkUv5> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/e9G2vHbc> .\r\n<https://id.parliament.uk/e9G2vHbc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 30\" .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/e9G2vHbc>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/1O8W6asw> .\r\n<https://id.parliament.uk/1O8W6asw>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/1O8W6asw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/1O8W6asw>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/9ouoghbQ>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/9ouoghbQ>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        31\" .\r\n<https://id.parliament.uk/cspzmb6w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/cspzmb6w>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        32\" .\r\n<https://id.parliament.uk/puVMaN7t> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/puVMaN7t>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        33\" .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/CElQJyo7> .\r\n<https://id.parliament.uk/CElQJyo7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/CElQJyo7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/CElQJyo7>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/9ouoghbQ>
+        .\r\n<https://id.parliament.uk/e9G2vHbc> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/nI9LkUv5>
+        <https://id.parliament.uk/schema/businessItemHasProcedureStep> <https://id.parliament.uk/9ouoghbQ>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/9ouoghbQ>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/PIKU9e9T> .\r\n<https://id.parliament.uk/PIKU9e9T>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/PIKU9e9T> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/PIKU9e9T>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/j7oLnCke>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/j7oLnCke>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        34\" .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/uSbib7WG> .\r\n<https://id.parliament.uk/uSbib7WG>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/uSbib7WG> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/uSbib7WG>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/VDT2CWL6>
+        .\r\n<https://id.parliament.uk/VDT2CWL6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/VDT2CWL6>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        35\" .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/E6euQmJr> .\r\n<https://id.parliament.uk/E6euQmJr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/E6euQmJr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/E6euQmJr>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/j7oLnCke>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ppwhpEZZ> .\r\n<https://id.parliament.uk/ppwhpEZZ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/ppwhpEZZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/ppwhpEZZ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/j7oLnCke>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/2MdyJOW1> .\r\n<https://id.parliament.uk/2MdyJOW1>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/2MdyJOW1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/2MdyJOW1>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/VDT2CWL6>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/JgnO6HNQ> .\r\n<https://id.parliament.uk/JgnO6HNQ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/JgnO6HNQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/JgnO6HNQ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/VDT2CWL6>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/EwFX8vcA> .\r\n<https://id.parliament.uk/EwFX8vcA>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/EwFX8vcA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/EwFX8vcA>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/j7oLnCke>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/K2b96csV> .\r\n<https://id.parliament.uk/K2b96csV>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/K2b96csV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/K2b96csV>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/VDT2CWL6>
+        .\r\n<https://id.parliament.uk/9ouoghbQ> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/nI9LkUv5>
+        <https://id.parliament.uk/schema/businessItemHasProcedureStep> <https://id.parliament.uk/j7oLnCke>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/j7oLnCke>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/LFTabndS> .\r\n<https://id.parliament.uk/LFTabndS>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/LFTabndS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/LFTabndS>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/uwTqgHE3>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/dd0ZFdzR> .\r\n<https://id.parliament.uk/dd0ZFdzR>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/dd0ZFdzR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/dd0ZFdzR>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/bdb8IOan> .\r\n<https://id.parliament.uk/bdb8IOan>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/bdb8IOan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/bdb8IOan>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/ptLej1c8>
+        .\r\n<https://id.parliament.uk/ptLej1c8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/ptLej1c8>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        36\" .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/3IPf8g2z> .\r\n<https://id.parliament.uk/3IPf8g2z>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/3IPf8g2z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/3IPf8g2z>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sS3x4ME4>
+        .\r\n<https://id.parliament.uk/sS3x4ME4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/sS3x4ME4>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        37\" .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/3lPR1GtB> .\r\n<https://id.parliament.uk/3lPR1GtB>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/3lPR1GtB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/3lPR1GtB>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/emDM6b23> .\r\n<https://id.parliament.uk/emDM6b23>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/emDM6b23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/emDM6b23>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/uwTqgHE3>
+        .\r\n<https://id.parliament.uk/j7oLnCke> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/HQp7XIfj>
+        .\r\n<https://id.parliament.uk/HQp7XIfj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/BusinessItem> .\r\n<https://id.parliament.uk/HQp7XIfj>
+        <https://id.parliament.uk/schema/businessItemDate> \"2018-02-08+00:00\"^^<http://www.w3.org/2001/XMLSchema#date>
+        .\r\n<https://id.parliament.uk/HQp7XIfj> <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink>
+        <https://hansard.parliament.uk/Commons/2018-02-08/debates/6a1e3970-c2ec-416b-a953-7d16df279124/AndreyLugovoyAndDmitriKovtunFreezingOrder2018>
+        .\r\n<https://id.parliament.uk/HQp7XIfj> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/FLHAXypO> .\r\n<https://id.parliament.uk/FLHAXypO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 38\" .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/FLHAXypO>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/oat0KGUW> .\r\n<https://id.parliament.uk/oat0KGUW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/oat0KGUW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/oat0KGUW>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/nveorPPO>
+        .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/lafCG9TD> .\r\n<https://id.parliament.uk/lafCG9TD>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/lafCG9TD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/lafCG9TD>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/4Uk15JA8>
+        .\r\n<https://id.parliament.uk/4Uk15JA8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/4Uk15JA8>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        39\" .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/f8Pypuyn> .\r\n<https://id.parliament.uk/f8Pypuyn>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/f8Pypuyn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/f8Pypuyn>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/nveorPPO>
+        .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/cYw9XHKA> .\r\n<https://id.parliament.uk/cYw9XHKA>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/cYw9XHKA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/cYw9XHKA>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/QZVPJBrJ>
+        .\r\n<https://id.parliament.uk/QZVPJBrJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/QZVPJBrJ>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        40\" .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/pLiEID37> .\r\n<https://id.parliament.uk/pLiEID37>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/pLiEID37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/pLiEID37>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/S652OOdl>
+        .\r\n<https://id.parliament.uk/S652OOdl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/S652OOdl>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        41\" .\r\n<https://id.parliament.uk/FLHAXypO> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ltInMJ0G> .\r\n<https://id.parliament.uk/ltInMJ0G>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/ltInMJ0G> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/ltInMJ0G>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MR1lqNq3>
+        .\r\n<https://id.parliament.uk/MR1lqNq3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/MR1lqNq3>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        42\" .\r\n<https://id.parliament.uk/HQp7XIfj> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/LPFTHOix> .\r\n<https://id.parliament.uk/LPFTHOix>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/LPFTHOix> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 43\" .\r\n<https://id.parliament.uk/LPFTHOix> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/X1r7Widq>
+        .\r\n<https://id.parliament.uk/X1r7Widq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/BusinessItem> .\r\n<https://id.parliament.uk/X1r7Widq>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Laying>
+        .\r\n<https://id.parliament.uk/X1r7Widq> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-01-19+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/X1r7Widq>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <https://publications.parliament.uk/pa/cm201719/cmvote/180119v01.html>
+        .\r\n<https://id.parliament.uk/X1r7Widq> <https://id.parliament.uk/schema/layingHasLayingBody>
+        <https://id.parliament.uk/HYfypSOE> .\r\n<https://id.parliament.uk/X1r7Widq>
+        <https://id.parliament.uk/schema/businessItemHasProcedureStep> <https://id.parliament.uk/cspzmb6w>
+        .\r\n<https://id.parliament.uk/HYfypSOE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/LayingBody> .\r\n<https://id.parliament.uk/HYfypSOE>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Group>
+        .\r\n<https://id.parliament.uk/HYfypSOE> <https://id.parliament.uk/schema/groupName>
+        \"groupName - 1\" .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/cspzmb6w>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/AUA4zxin> .\r\n<https://id.parliament.uk/cspzmb6w>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/TP3L7zMN> .\r\n<https://id.parliament.uk/AUA4zxin>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/AUA4zxin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/AUA4zxin>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/oUjmJcf5>
+        .\r\n<https://id.parliament.uk/oUjmJcf5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/oUjmJcf5>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        44\" .\r\n<https://id.parliament.uk/TP3L7zMN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/TP3L7zMN>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/TP3L7zMN> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/zQrAQfxB> .\r\n<https://id.parliament.uk/cspzmb6w>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/urk1Seg6> .\r\n<https://id.parliament.uk/urk1Seg6>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/urk1Seg6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/urk1Seg6>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/9S4sPE3n> .\r\n<https://id.parliament.uk/9S4sPE3n>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/9S4sPE3n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/9S4sPE3n>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/RnTwilWz>
+        .\r\n<https://id.parliament.uk/RnTwilWz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/RnTwilWz>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        45\" .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/IxeqvhPl> .\r\n<https://id.parliament.uk/IxeqvhPl>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/IxeqvhPl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/IxeqvhPl>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/O5QdnmSL>
+        .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/v15sPKIR> .\r\n<https://id.parliament.uk/v15sPKIR>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/v15sPKIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/v15sPKIR>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/yZVOjzqh> .\r\n<https://id.parliament.uk/yZVOjzqh>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/yZVOjzqh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/yZVOjzqh>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/zQrAQfxB>
+        .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/8olutoql> .\r\n<https://id.parliament.uk/8olutoql>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/8olutoql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/8olutoql>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/5xTe6nwE>
+        .\r\n<https://id.parliament.uk/5xTe6nwE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/5xTe6nwE>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        46\" .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasProcedure>
+        <https://id.parliament.uk/iCdMN1MW> .\r\n<https://id.parliament.uk/iCdMN1MW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/Procedure>
+        .\r\n<https://id.parliament.uk/iCdMN1MW> <https://id.parliament.uk/schema/procedureName>
+        \"procedureName - 5\" .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/NZBrd8Gs> .\r\n<https://id.parliament.uk/NZBrd8Gs>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/NZBrd8Gs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/NZBrd8Gs>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/3TPVFlNJ>
+        .\r\n<https://id.parliament.uk/3TPVFlNJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/3TPVFlNJ>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        47\" .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/XRAfemeU> .\r\n<https://id.parliament.uk/XRAfemeU>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/XRAfemeU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/XRAfemeU>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/aSjgyhk6>
+        .\r\n<https://id.parliament.uk/aSjgyhk6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/aSjgyhk6>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        48\" .\r\n<https://id.parliament.uk/cspzmb6w> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/uKfPNjEx> .\r\n<https://id.parliament.uk/uKfPNjEx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/uKfPNjEx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/uKfPNjEx>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/oUjmJcf5>
+        .\r\n<https://id.parliament.uk/X1r7Widq> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/puVMaN7t> .\r\n<https://id.parliament.uk/puVMaN7t>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/6cM7fsfn> .\r\n<https://id.parliament.uk/puVMaN7t>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ic2sPiX8> .\r\n<https://id.parliament.uk/6cM7fsfn>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/6cM7fsfn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/6cM7fsfn>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MUdsWgMn>
+        .\r\n<https://id.parliament.uk/ic2sPiX8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/ic2sPiX8>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/ic2sPiX8> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/SydDTLLR> .\r\n<https://id.parliament.uk/SydDTLLR>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/SydDTLLR> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 49\" .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/PmgaCjoW> .\r\n<https://id.parliament.uk/PmgaCjoW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/PmgaCjoW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/PmgaCjoW>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/iW9MbyrD>
+        .\r\n<https://id.parliament.uk/iW9MbyrD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/iW9MbyrD>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        50\" .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Sr5K3KvE> .\r\n<https://id.parliament.uk/Sr5K3KvE>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Sr5K3KvE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Sr5K3KvE>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/pp4QwM9d>
+        .\r\n<https://id.parliament.uk/pp4QwM9d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/pp4QwM9d>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        51\" .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/fF3AlJCx> .\r\n<https://id.parliament.uk/fF3AlJCx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/fF3AlJCx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/fF3AlJCx>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/iW9MbyrD>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/HwqacmSX> .\r\n<https://id.parliament.uk/HwqacmSX>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/HwqacmSX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/HwqacmSX>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/xAb8mi2D>
+        .\r\n<https://id.parliament.uk/xAb8mi2D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/xAb8mi2D>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        52\" .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/j9m69ao4> .\r\n<https://id.parliament.uk/puVMaN7t>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/YIKsug7V> .\r\n<https://id.parliament.uk/j9m69ao4>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/j9m69ao4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/j9m69ao4>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/YIKsug7V> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/YIKsug7V>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/YIKsug7V> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/5ZzUquaT> .\r\n<https://id.parliament.uk/5ZzUquaT>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/5ZzUquaT> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 53\" .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/wd8KZUJQ> .\r\n<https://id.parliament.uk/wd8KZUJQ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/wd8KZUJQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/wd8KZUJQ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/aQwXfyru> .\r\n<https://id.parliament.uk/aQwXfyru>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/aQwXfyru> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/aQwXfyru>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MUdsWgMn>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/KjZKUOhQ> .\r\n<https://id.parliament.uk/KjZKUOhQ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/KjZKUOhQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/KjZKUOhQ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/Stb5yFdq> .\r\n<https://id.parliament.uk/Stb5yFdq>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Stb5yFdq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/Stb5yFdq>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MUdsWgMn>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/J40MHRaI> .\r\n<https://id.parliament.uk/J40MHRaI>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/J40MHRaI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/J40MHRaI>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/oUjmJcf5>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/0WLFg2dA> .\r\n<https://id.parliament.uk/0WLFg2dA>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/0WLFg2dA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/0WLFg2dA>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/e9G2vHbc>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/WtsTsw7E> .\r\n<https://id.parliament.uk/WtsTsw7E>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/WtsTsw7E> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/WtsTsw7E>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/oUjmJcf5>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/fvkh95IQ> .\r\n<https://id.parliament.uk/fvkh95IQ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/fvkh95IQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/fvkh95IQ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/3TPVFlNJ>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/bvImdBCD> .\r\n<https://id.parliament.uk/bvImdBCD>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/bvImdBCD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/bvImdBCD>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MUdsWgMn>
+        .\r\n<https://id.parliament.uk/puVMaN7t> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/u17T6Lk5> .\r\n<https://id.parliament.uk/u17T6Lk5>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/u17T6Lk5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/u17T6Lk5>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/y8CtlZ7i>
+        .\r\n<https://id.parliament.uk/y8CtlZ7i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/y8CtlZ7i>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        54\" .\r\n<https://id.parliament.uk/X1r7Widq> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/JqzvdWEL> .\r\n<https://id.parliament.uk/JqzvdWEL>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/JqzvdWEL> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 55\" .\r\n<https://id.parliament.uk/JqzvdWEL> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/BzokjryW> .\r\n<https://id.parliament.uk/JqzvdWEL>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/SIlmaztb> .\r\n<https://id.parliament.uk/BzokjryW>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/BzokjryW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/BzokjryW>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/cspzmb6w>
+        .\r\n<https://id.parliament.uk/SIlmaztb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/SIlmaztb>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/SIlmaztb> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/OM5fjnQ3> .\r\n<https://id.parliament.uk/JqzvdWEL>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/OVMKn261> .\r\n<https://id.parliament.uk/OVMKn261>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/OVMKn261> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/OVMKn261>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/puVMaN7t>
+        .\r\n<https://id.parliament.uk/JqzvdWEL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/DbF4Bd9T> .\r\n<https://id.parliament.uk/DbF4Bd9T>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/DbF4Bd9T> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/DbF4Bd9T>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/OM5fjnQ3>
+        .\r\n<https://id.parliament.uk/JqzvdWEL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/T5DKON2x> .\r\n<https://id.parliament.uk/T5DKON2x>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/T5DKON2x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/T5DKON2x>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/OM5fjnQ3>
+        .\r\n<https://id.parliament.uk/JqzvdWEL> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/sP6kZ0xb> .\r\n<https://id.parliament.uk/sP6kZ0xb>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/sP6kZ0xb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/sP6kZ0xb>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/No1qmqJ4>
+        .\r\n<https://id.parliament.uk/No1qmqJ4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/No1qmqJ4>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        56\" .\r\n<https://id.parliament.uk/X1r7Widq> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/No1qmqJ4> .\r\n<https://id.parliament.uk/No1qmqJ4>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/1AFu55Hs>
+        .\r\n<https://id.parliament.uk/No1qmqJ4> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/BIDWS3Qr> .\r\n<https://id.parliament.uk/BIDWS3Qr>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/BIDWS3Qr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/BIDWS3Qr>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/Ksnj7JJ8>
+        .\r\n<https://id.parliament.uk/Ksnj7JJ8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/Ksnj7JJ8>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        57\" .\r\n<https://id.parliament.uk/No1qmqJ4> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/F7f4F0bp>
+        <https://id.parliament.uk/schema/workPackageHasBusinessItem> <https://id.parliament.uk/ofKqmAy3>
+        .\r\n<https://id.parliament.uk/ofKqmAy3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/BusinessItem> .\r\n<https://id.parliament.uk/ofKqmAy3>
+        <https://id.parliament.uk/schema/businessItemHasProcedureStep> <https://id.parliament.uk/O5QdnmSL>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/O5QdnmSL>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/hpqjRzE7> .\r\n<https://id.parliament.uk/hpqjRzE7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/hpqjRzE7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/hpqjRzE7>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/kBOXHIxX>
+        .\r\n<https://id.parliament.uk/kBOXHIxX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/kBOXHIxX>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        58\" .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/64U6rgrt> .\r\n<https://id.parliament.uk/64U6rgrt>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/64U6rgrt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/64U6rgrt>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/DDN0Bdp5>
+        .\r\n<https://id.parliament.uk/DDN0Bdp5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/DDN0Bdp5>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        59\" .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/AIuOgQk6> .\r\n<https://id.parliament.uk/AIuOgQk6>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/AIuOgQk6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/AIuOgQk6>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qtDMKvC4>
+        .\r\n<https://id.parliament.uk/qtDMKvC4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/qtDMKvC4>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        60\" .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/mp7YBknF> .\r\n<https://id.parliament.uk/mp7YBknF>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/mp7YBknF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mp7YBknF>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/DDN0Bdp5>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/NbBsOyyq> .\r\n<https://id.parliament.uk/NbBsOyyq>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/NbBsOyyq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/NbBsOyyq>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sE6lpbyD>
+        .\r\n<https://id.parliament.uk/sE6lpbyD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/sE6lpbyD>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        61\" .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Ezr5HjGA> .\r\n<https://id.parliament.uk/Ezr5HjGA>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Ezr5HjGA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Ezr5HjGA>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/DDN0Bdp5>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Z4DVpSyl> .\r\n<https://id.parliament.uk/Z4DVpSyl>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Z4DVpSyl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Z4DVpSyl>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sE6lpbyD>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/DLayfJDx> .\r\n<https://id.parliament.uk/DLayfJDx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/DLayfJDx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/DLayfJDx>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/kBOXHIxX>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/mt94eFVv> .\r\n<https://id.parliament.uk/mt94eFVv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/mt94eFVv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mt94eFVv>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qtDMKvC4>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/Q7862qd7> .\r\n<https://id.parliament.uk/Q7862qd7>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/Q7862qd7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/Q7862qd7>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/kBOXHIxX>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/TakW4NsX> .\r\n<https://id.parliament.uk/TakW4NsX>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/TakW4NsX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/TakW4NsX>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qtDMKvC4>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/s4yu6l9q> .\r\n<https://id.parliament.uk/s4yu6l9q>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/s4yu6l9q> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/s4yu6l9q>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sE6lpbyD>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/oPYwPtXs> .\r\n<https://id.parliament.uk/oPYwPtXs>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/oPYwPtXs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/oPYwPtXs>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qtDMKvC4>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/nhwKufER> .\r\n<https://id.parliament.uk/nhwKufER>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/nhwKufER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/nhwKufER>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/kBOXHIxX>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/yRAKxxPZ> .\r\n<https://id.parliament.uk/yRAKxxPZ>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/yRAKxxPZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/yRAKxxPZ>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/sE6lpbyD>
+        .\r\n<https://id.parliament.uk/O5QdnmSL> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/mTulYsmi> .\r\n<https://id.parliament.uk/mTulYsmi>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/mTulYsmi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mTulYsmi>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/DDN0Bdp5>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/1O1jjxeY> .\r\n<https://id.parliament.uk/1O1jjxeY>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/1O1jjxeY> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/sS3x4ME4> .\r\n<https://id.parliament.uk/sS3x4ME4>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/sS3x4ME4> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/C2xKQ4nO> .\r\n<https://id.parliament.uk/C2xKQ4nO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/C2xKQ4nO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/C2xKQ4nO>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/mHLm3KY7>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/HLYrk561> .\r\n<https://id.parliament.uk/HLYrk561>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/HLYrk561> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/yDIJT51q> .\r\n<https://id.parliament.uk/yDIJT51q>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/yDIJT51q> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 62\" .\r\n<https://id.parliament.uk/yDIJT51q> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/WkUWUBMx> .\r\n<https://id.parliament.uk/yDIJT51q>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/WAhhnaAO> .\r\n<https://id.parliament.uk/WAhhnaAO>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/WAhhnaAO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/WAhhnaAO>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/o3KM0Xvt>
+        .\r\n<https://id.parliament.uk/o3KM0Xvt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/o3KM0Xvt>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        63\" .\r\n<https://id.parliament.uk/yDIJT51q> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ARkpeIld> .\r\n<https://id.parliament.uk/ARkpeIld>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/ARkpeIld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/ARkpeIld>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/sFW7opW4> .\r\n<https://id.parliament.uk/sFW7opW4>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/sFW7opW4> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/W4Sgl6Do> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureStep>
+        .\r\n<https://id.parliament.uk/W4Sgl6Do> <https://id.parliament.uk/schema/procedureStepName>
+        \"procedureStepName - 64\" .\r\n<https://id.parliament.uk/W4Sgl6Do> <https://id.parliament.uk/schema/procedureStepHasHouse>
+        <https://id.parliament.uk/1AFu55Hs> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/yu474ibE> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/227HY6wT> .\r\n<https://id.parliament.uk/yu474ibE>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/yu474ibE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/yu474ibE>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/O5QdnmSL>
+        .\r\n<https://id.parliament.uk/227HY6wT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/227HY6wT>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/W4Sgl6Do> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/9OV9sFUc> .\r\n<https://id.parliament.uk/9OV9sFUc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/9OV9sFUc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/9OV9sFUc>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/MMFzqr50>
+        .\r\n<https://id.parliament.uk/MMFzqr50> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/MMFzqr50>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        65\" .\r\n<https://id.parliament.uk/W4Sgl6Do> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/sYUxI9dc> .\r\n<https://id.parliament.uk/sYUxI9dc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/sYUxI9dc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/sYUxI9dc>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/M28y2NsI>
+        .\r\n<https://id.parliament.uk/M28y2NsI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/M28y2NsI>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        66\" .\r\n<https://id.parliament.uk/W4Sgl6Do> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/s8eLF8b0> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/4fEQePJv> .\r\n<https://id.parliament.uk/s8eLF8b0>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/s8eLF8b0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/s8eLF8b0>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/O5QdnmSL>
+        .\r\n<https://id.parliament.uk/4fEQePJv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureRoute> .\r\n<https://id.parliament.uk/4fEQePJv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/AllowedProcedureRoute>
+        .\r\n<https://id.parliament.uk/4fEQePJv> <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep>
+        <https://id.parliament.uk/MMFzqr50> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/KvWfV1vw> .\r\n<https://id.parliament.uk/KvWfV1vw>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/KvWfV1vw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/W4Sgl6Do>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/pWjzR1Uc> .\r\n<https://id.parliament.uk/pWjzR1Uc>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/pWjzR1Uc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/pWjzR1Uc>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/M28y2NsI>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/hBxNhq3Z> .\r\n<https://id.parliament.uk/hBxNhq3Z>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/hBxNhq3Z> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/mHLm3KY7> .\r\n<https://id.parliament.uk/mHLm3KY7>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/dKWjBIDP> .\r\n<https://id.parliament.uk/dKWjBIDP>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/dKWjBIDP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/dKWjBIDP>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/YhMl2ylC>
+        .\r\n<https://id.parliament.uk/YhMl2ylC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/YhMl2ylC>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        67\" .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ucmcfnic> .\r\n<https://id.parliament.uk/ucmcfnic>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/ucmcfnic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/ucmcfnic>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/7C9iFOw0>
+        .\r\n<https://id.parliament.uk/7C9iFOw0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/7C9iFOw0>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        68\" .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/2D75sbAB> .\r\n<https://id.parliament.uk/2D75sbAB>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/2D75sbAB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mHLm3KY7>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/IknHtnXK> .\r\n<https://id.parliament.uk/IknHtnXK>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/IknHtnXK> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/IknHtnXK>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/XecrmTIu> .\r\n<https://id.parliament.uk/XecrmTIu>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/XecrmTIu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/XecrmTIu>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qELp3R9D>
+        .\r\n<https://id.parliament.uk/qELp3R9D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/ProcedureStep> .\r\n<https://id.parliament.uk/qELp3R9D>
+        <https://id.parliament.uk/schema/procedureStepName> \"procedureStepName -
+        69\" .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/mg2oSUXT> .\r\n<https://id.parliament.uk/mg2oSUXT>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/mg2oSUXT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mg2oSUXT>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/qELp3R9D>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/rjVSXU7x> .\r\n<https://id.parliament.uk/rjVSXU7x>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/rjVSXU7x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/rjVSXU7x>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/bEzmXakv>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/yMGjw19u> .\r\n<https://id.parliament.uk/yMGjw19u>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/yMGjw19u> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/yMGjw19u>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/yDIJT51q>
+        .\r\n<https://id.parliament.uk/mHLm3KY7> <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/TObvgooN> .\r\n<https://id.parliament.uk/TObvgooN>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/TObvgooN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/mHLm3KY7>
+        <https://id.parliament.uk/schema/procedureStepAllowsAllowedProcedureRoute>
+        <https://id.parliament.uk/ClMqMhjo> .\r\n<https://id.parliament.uk/ClMqMhjo>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/ClMqMhjo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/AllowedProcedureRoute> .\r\n<https://id.parliament.uk/ClMqMhjo>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/7C9iFOw0>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/Xv1aoyTy> .\r\n<https://id.parliament.uk/Xv1aoyTy>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/Xv1aoyTy> <https://id.parliament.uk/schema/businessItemDate>
+        \"2018-02-07+00:00\"^^<http://www.w3.org/2001/XMLSchema#date> .\r\n<https://id.parliament.uk/Xv1aoyTy>
+        <https://id.parliament.uk/schema/businessItemHasBusinessItemWebLink> <http://lordsbusiness.parliament.uk/Documents/Download?documentId=1303&filename=HLBusiness.pdf>
+        .\r\n<https://id.parliament.uk/Xv1aoyTy> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/bEzmXakv> .\r\n<https://id.parliament.uk/bEzmXakv>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/WkUWUBMx>
+        .\r\n<https://id.parliament.uk/bEzmXakv> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/yFvEeuGi> .\r\n<https://id.parliament.uk/yFvEeuGi>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/yFvEeuGi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/yFvEeuGi>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/vOCSRhjw>
+        .\r\n<https://id.parliament.uk/bEzmXakv> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/tk8q7w8S> .\r\n<https://id.parliament.uk/tk8q7w8S>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/tk8q7w8S> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/tk8q7w8S>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/vOCSRhjw>
+        .\r\n<https://id.parliament.uk/F7f4F0bp> <https://id.parliament.uk/schema/workPackageHasBusinessItem>
+        <https://id.parliament.uk/ifX7RRCK> .\r\n<https://id.parliament.uk/ifX7RRCK>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/BusinessItem>
+        .\r\n<https://id.parliament.uk/ifX7RRCK> <https://id.parliament.uk/schema/businessItemHasProcedureStep>
+        <https://id.parliament.uk/M28y2NsI> .\r\n<https://id.parliament.uk/M28y2NsI>
+        <https://id.parliament.uk/schema/procedureStepHasHouse> <https://id.parliament.uk/1AFu55Hs>
+        .\r\n<https://id.parliament.uk/M28y2NsI> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/4OElP55z> .\r\n<https://id.parliament.uk/4OElP55z>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/4OElP55z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/4OElP55z>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/O5QdnmSL>
+        .\r\n<https://id.parliament.uk/M28y2NsI> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/FzSiow2g> .\r\n<https://id.parliament.uk/FzSiow2g>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/FzSiow2g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/FzSiow2g>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FLHAXypO>
+        .\r\n<https://id.parliament.uk/M28y2NsI> <https://id.parliament.uk/schema/procedureStepCausesCausedProcedureRoute>
+        <https://id.parliament.uk/EFaNLuVv> .\r\n<https://id.parliament.uk/EFaNLuVv>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/ProcedureRoute>
+        .\r\n<https://id.parliament.uk/EFaNLuVv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/CausedProcedureRoute> .\r\n<https://id.parliament.uk/EFaNLuVv>
+        <https://id.parliament.uk/schema/procedureRouteIsToProcedureStep> <https://id.parliament.uk/FLHAXypO>
+        .\r\n"
+    http_version: 
+  recorded_at: Fri, 18 May 2018 15:36:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/house_index
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Ruby
+      Accept:
+      - "*/*"
+      - application/n-triples
+      Ocp-Apim-Subscription-Key:
+      - "<AUTH_TOKEN>"
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '176'
+      Content-Type:
+      - application/n-triples
+      Content-Encoding:
+      - gzip
+      Expires:
+      - "-1"
+      Request-Context:
+      - appId=cid-v1:330aa411-57af-491f-b22a-1cab7d08a6a9
+      Strict-Transport-Security:
+      - max-age=31536000
+      Date:
+      - Fri, 18 May 2018 15:36:39 GMT
+    body:
+      encoding: UTF-8
+      string: "<https://id.parliament.uk/1AFu55Hs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>
+        <https://id.parliament.uk/schema/House> .\r\n<https://id.parliament.uk/1AFu55Hs>
+        <https://id.parliament.uk/schema/houseName> \"houseName - 2\" .\r\n<https://id.parliament.uk/WkUWUBMx>
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://id.parliament.uk/schema/House>
+        .\r\n<https://id.parliament.uk/WkUWUBMx> <https://id.parliament.uk/schema/houseName>
+        \"houseName - 1\" .\r\n"
+    http_version: 
+  recorded_at: Fri, 18 May 2018 15:36:39 GMT
+recorded_with: VCR 4.0.0

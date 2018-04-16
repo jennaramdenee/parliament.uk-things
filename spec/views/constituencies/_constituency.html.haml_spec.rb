@@ -28,7 +28,7 @@ RSpec.describe 'constituencies/_constituency', vcr: true do
       end
 
       it 'will not render start date' do
-        expect(rendered).not_to match("from #{(Time.zone.now - 1.month).strftime('%-e %b %Y')}")
+        expect(rendered).not_to match("from #{(Time.zone.now - 1.month).strftime('%-d %b %Y')}")
       end
     end
 
@@ -39,7 +39,7 @@ RSpec.describe 'constituencies/_constituency', vcr: true do
       end
 
       it 'will render start date' do
-        expect(rendered).to match("from #{(Time.zone.now - 1.month).strftime('%-e %b %Y')}")
+        expect(rendered).to match("from #{(Time.zone.now - 1.month).strftime('%-d %b %Y')}")
       end
     end
   end
@@ -62,7 +62,7 @@ RSpec.describe 'constituencies/_constituency', vcr: true do
       end
 
       it 'will render the end date' do
-        expect(rendered).to match("to #{(Time.zone.now - 1.day).strftime('%-e %b %Y')}")
+        expect(rendered).to match("to #{(Time.zone.now - 1.day).strftime('%-d %b %Y')}")
       end
     end
   end
@@ -103,7 +103,7 @@ RSpec.describe 'constituencies/_constituency', vcr: true do
           end
 
           it 'will not render current incumbency start date' do
-            expect(rendered).not_to match("#{(Time.zone.now - 1.month).strftime('%-e %b %Y')} to present")
+            expect(rendered).not_to match("#{(Time.zone.now - 1.month).strftime('%-d %b %Y')} to present")
           end
         end
 
@@ -147,8 +147,8 @@ RSpec.describe 'constituencies/_constituency', vcr: true do
 
     it 'will list constituency' do
       expect(rendered).to match(/Constituency/)
-      expect(rendered).to match("from #{(Time.zone.now - 1.month).strftime('%-e %b %Y')}")
-      expect(rendered).to match("to #{(Time.now - 1.day).strftime('%-e %b %Y')}")
+      expect(rendered).to match("from #{(Time.zone.now - 1.month).strftime('%-d %b %Y')}")
+      expect(rendered).to match("to #{(Time.now - 1.day).strftime('%-d %b %Y')}")
     end
   end
 

@@ -431,10 +431,12 @@ en:
     showing_results: 'showing results for'
     showing_all: 'showing all'
     aria_label: 'Paged navigation'
-  # global time format translations
+  # global time and date format translations
   time:
     formats:
       default: '%-d %b %Y'
+  date:
+    abbr_month_names: [ '', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   # global error message translations
   error:
     no_constituency: "we couldn't find the postcode you entered."

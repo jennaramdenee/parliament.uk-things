@@ -24,10 +24,15 @@ en:
   activemodel:
     errors:
       models:
+        hybrid_bill_document:
+          attributes:
+            filesize:
+              less_than: 'must be less than 2150000'
+
         hybrid_bill_individual_submission:
           attributes:
             first_name:
-              blank: "Please enter a first name"
+              blank: 'Please enter a first name'
             surname:
               blank: 'Please enter a last name'
             address_1:
@@ -59,7 +64,7 @@ en:
         hybrid_bill_organisation_submission:
           attributes:
             first_name:
-              blank: "Please enter a first name"
+              blank: 'Please enter a first name'
             on_behalf_of:
               blank: "Please enter the organisation name"
             surname:

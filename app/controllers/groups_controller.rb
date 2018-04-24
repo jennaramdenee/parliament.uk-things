@@ -6,20 +6,15 @@ class GroupsController < ApplicationController
   }.freeze
 
   def show
-  	@group, @house, @formal_body_type, @person, @party, @constituency, @postal_address = Parliament::Utils::Helpers::FilterHelper.filter(@request, 'Group', 'House', 'FormalBodyType', 'Person', 'Party', 'ConstituencyGroup', 'PostalAddress')
+  	@group, @contact_points, @postal_address = Parliament::Utils::Helpers::FilterHelper.filter(
+      @request,
+      'Group',
+      'ContactPoint',
+      'PostalAddress'
+    )
 
   	@group = @group.first
-
-  	@house = @house.first
-
-  	@formal_body_type = @formal_body_type.first
-
-  	@person = @person.first
-
-  	@party = @party.first
-
-  	@constituency = @constituency.first
-
-  	@postal_address = @postal_address.first
+    @postal_address = @postal_address.first
+    @chair_people = @group.chair_people if @group.formal_body?
   end
 end

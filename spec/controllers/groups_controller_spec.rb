@@ -14,38 +14,12 @@ RSpec.describe GroupsController, vcr: true do
       expect(assigns(:group)).to be_a(Grom::Node)
       expect(assigns(:group).type).to include('https://id.parliament.uk/schema/Group')
       expect(assigns(:group).type).to include('https://id.parliament.uk/schema/FormalBody')
-      expect(assigns(:group).member_count).to eq(12)
+      expect(assigns(:group).member_count).to eq(13)
     end
 
-    it 'assigns @house' do
-      expect(assigns(:house)).to be_a(Grom::Node)
-      expect(assigns(:house).type).to eq('https://id.parliament.uk/schema/House')
-      expect(assigns(:house).name).to eq('houseName - 1')
-    end
-
-    it 'assigns @person' do
-      expect(assigns(:person)).to be_a(Grom::Node)
-      expect(assigns(:person).type).to eq('https://id.parliament.uk/schema/Person')
-      expect(assigns(:person).display_name).to eq('F31CBD81AD8343898B49DC65743F0BDF - 1')
-      expect(assigns(:person).image_id).to eq('ZY0Mx1bp')
-    end
-
-    it 'assigns @formal_body_type' do
-      expect(assigns(:formal_body_type)).to be_a(Grom::Node)
-      expect(assigns(:formal_body_type).type).to eq('https://id.parliament.uk/schema/FormalBodyType')
-      expect(assigns(:formal_body_type).name).to eq('formalbodyTypeName - 1')
-    end
-
-    it 'assigns @party' do
-      expect(assigns(:party)).to be_a(Grom::Node)
-      expect(assigns(:party).type).to eq('https://id.parliament.uk/schema/Party')
-      expect(assigns(:party).name).to eq('partyName - 1')
-    end
-
-    it 'assigns @constituency' do
-      expect(assigns(:constituency)).to be_a(Grom::Node)
-      expect(assigns(:constituency).type).to eq('https://id.parliament.uk/schema/ConstituencyGroup')
-      expect(assigns(:constituency).name).to eq('constituencyGroupName - 1')
+    it 'assigns @contact_points' do
+      expect(assigns(:contact_points).first).to be_a(Grom::Node)
+      expect(assigns(:contact_points).first.type).to eq('https://id.parliament.uk/schema/ContactPoint')
     end
 
     it 'assigns @postal_address' do

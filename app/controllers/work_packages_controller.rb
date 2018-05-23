@@ -33,9 +33,12 @@ class WorkPackagesController < ApplicationController
     # Go through each bucket
     @x.each do |distance, steps|
       # TODO: Sort keys by incremental number
-      # steps = steps.sort_by(&:business_item_date)
       # Sort array of steps by business item date, put nil at the end
-      steps.sort { |a,b| a.business_item_date && b.business_item_date ? a.business_item_date <=> b.business_item_date : a.business_item_date ? -1 : 1 }
+      steps = Parliament::NTriple::Utils.sort_by({
+        list: steps,
+        parameters: [:business_item_date],
+        prepend_rejected: false
+      })
       # Add to an array of steps
       @ordered_procedure_steps << steps
     end

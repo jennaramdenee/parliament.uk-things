@@ -4,7 +4,7 @@ RSpec.describe WorkPackagesController, vcr: true do
   describe 'GET show' do
     context 'variable assignment' do
       before(:each) do
-        get :show, params: { work_package_id: 'WDlhym6A' }
+        get :show, params: { work_package_id: 'f6HEdGTF' }
       end
 
       it 'should have a response with a http status ok (200)' do
@@ -19,10 +19,6 @@ RSpec.describe WorkPackagesController, vcr: true do
         it 'as a Grom::Node of type WorkPackageableThing' do
           expect(assigns(:work_packageable_thing).type).to include('https://id.parliament.uk/schema/WorkPackageableThing')
         end
-
-        it 'to the work package with correct id' do
-          expect(assigns(:work_packageable_thing).graph_id).to eq('WDlhym6A')
-        end
       end
 
       context 'assigns @work_package' do
@@ -33,6 +29,11 @@ RSpec.describe WorkPackagesController, vcr: true do
         it 'as a Grom::Node of type WorkPackage' do
           expect(assigns(:work_package).type).to eq('https://id.parliament.uk/schema/WorkPackage')
         end
+
+        it 'to the work package with correct id' do
+          expect(assigns(:work_package).graph_id).to eq('f6HEdGTF')
+        end
+
       end
 
       context 'assigns @procedure' do
@@ -45,13 +46,23 @@ RSpec.describe WorkPackagesController, vcr: true do
         end
       end
 
-      context 'assigns @business_items' do
+      context 'assigns @actualized_procedure_steps' do
         it 'to be an array of Grom::Nodes' do
-          expect(assigns(:business_items).first).to be_a(Grom::Node)
+          expect(assigns(:actualized_procedure_steps).first).to be_a(Grom::Node)
         end
 
-        it 'to be an array of Grom::Nodes of type BusinessItem' do
-          expect(assigns(:business_items).map(&:type).uniq).to include('https://id.parliament.uk/schema/BusinessItem')
+        it 'to be an array of Grom::Nodes of type ProcedureStep' do
+          expect(assigns(:actualized_procedure_steps).first.type).to include('https://id.parliament.uk/schema/ProcedureStep')
+        end
+      end
+
+      context 'assigns @possible_procedure_steps' do
+        it 'to be an array of Grom::Nodes' do
+          expect(assigns(:possible_procedure_steps).first).to be_a(Grom::Node)
+        end
+
+        it 'to be an array of Grom::Nodes of type ProcedureStep' do
+          expect(assigns(:possible_procedure_steps).first.type).to include('https://id.parliament.uk/schema/ProcedureStep')
         end
       end
     end
@@ -62,8 +73,8 @@ RSpec.describe WorkPackagesController, vcr: true do
       [
         {
           route: 'show',
-          parameters: { work_package_id: 'WDlhym6A' },
-          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/work_package_by_id?work_package_id=WDlhym6A"
+          parameters: { work_package_id: 'f6HEdGTF' },
+          data_url: "#{ENV['PARLIAMENT_BASE_URL']}/work_package_by_id?work_package_id=f6HEdGTF"
         }
       ]
     end
@@ -76,7 +87,7 @@ RSpec.describe WorkPackagesController, vcr: true do
         request.headers.merge(headers)
       end
       it 'should raise ActionController::UnknownFormat error' do
-        expect{ get :show, params: { work_package_id: 'WDlhym6A' } }.to raise_error(ActionController::UnknownFormat)
+        expect{ get :show, params: { work_package_id: 'f6HEdGTF' } }.to raise_error(ActionController::UnknownFormat)
       end
     end
   end

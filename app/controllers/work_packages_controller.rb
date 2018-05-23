@@ -29,7 +29,5 @@ class WorkPackagesController < ApplicationController
 
     # Group business items by their date
     @grouped_and_ordered_business_items = BusinessItemGroupingHelper.group(@ordered_business_items, :date)
-
-    # @completed_business_items, @scheduled_business_items, @business_items_with_no_date = BusinessItemHelper.arrange_by_date(grouped_business_items)
   end
 end

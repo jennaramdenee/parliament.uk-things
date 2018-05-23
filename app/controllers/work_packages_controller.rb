@@ -32,8 +32,10 @@ class WorkPackagesController < ApplicationController
 
     # Go through each bucket
     @x.each do |distance, steps|
+      # TODO: Sort keys by incremental number
+      # steps = steps.sort_by(&:business_item_date)
       # Sort array of steps by business item date, put nil at the end
-      steps = steps.sort_by(&:business_item_date)
+      steps.sort { |a,b| a.business_item_date && b.business_item_date ? a.business_item_date <=> b.business_item_date : a.business_item_date ? -1 : 1 }
       # Add to an array of steps
       @ordered_procedure_steps << steps
     end
@@ -41,7 +43,7 @@ class WorkPackagesController < ApplicationController
     # goghwoiwrghoih
 
     # Map to business item and remove duplicates
-    @ordered_business_items = @ordered_procedure_steps.flatten!.map(&:business_item)
+    @ordered_business_items = @ordered_procedure_steps.flatten.map(&:business_item)
 
     # Group business items by their date
     @grouped_and_ordered_business_items = BusinessItemGroupingHelper.group(@ordered_business_items, :date)

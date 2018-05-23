@@ -29,30 +29,30 @@ RSpec.describe RoleGroupingHelper do
     end
   end
 
-  # describe '#create_sorted_array' do
-  #   context 'with no data' do
-  #     it 'returns an empty array' do
-  #       expect(RoleGroupingHelper.create_sorted_array({})).to eq([])
-  #     end
-  #   end
-  #
-  #   context 'with data' do
-  #     let(:node1) { double('node1', :start_date => 2015, :end_date => 2017, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'test'))}
-  #     let(:node2) { double('node2', :start_date => 2015, :end_date => 2016, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'banana'))}
-  #     let(:node3) { double('node3', :start_date => 1990, :end_date => 1994, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'test'))}
-  #     let(:node4) { double('node4', :start_date => 2015, :end_date => 2017, :type => 'SeatIncumbency', :grouping => double(:name, :name => nil))}
-  #     let(:node5) { double('node5', :start_date => 2013, :end_date => 2014, :type => 'SeatIncumbency', :grouping => double(:name, :name => nil))}
-  #     let(:data_hash) {{
-  #       'test'    => [node1, node3],
-  #       'banana'  => [node2],
-  #       'UNKNOWN' => [node4, node5]
-  #     }}
-  #
-  #     it 'returns an array of grouped objects' do
-  #       expect(RoleGroupingHelper.create_sorted_array(data_hash).length).to eq(4)
-  #     end
-  #   end
-  # end
+  describe '#create_sorted_array' do
+    context 'with no data' do
+      it 'returns an empty array' do
+        expect(RoleGroupingHelper.create_sorted_array({})).to eq([])
+      end
+    end
+
+    context 'with data' do
+      let(:node1) { double('node1', :start_date => 2015, :end_date => 2017, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'test'))}
+      let(:node2) { double('node2', :start_date => 2015, :end_date => 2016, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'banana'))}
+      let(:node3) { double('node3', :start_date => 1990, :end_date => 1994, :type => 'SeatIncumbency', :grouping => double(:name, :name => 'test'))}
+      let(:node4) { double('node4', :start_date => 2015, :end_date => 2017, :type => 'SeatIncumbency', :grouping => double(:name, :name => nil))}
+      let(:node5) { double('node5', :start_date => 2013, :end_date => 2014, :type => 'SeatIncumbency', :grouping => double(:name, :name => nil))}
+      let(:data_hash) {{
+        'test'    => [node1, node3],
+        'banana'  => [node2],
+        'UNKNOWN' => [node4, node5]
+      }}
+
+      it 'returns an array of grouped objects' do
+        expect(RoleGroupingHelper.create_sorted_array(data_hash).length).to eq(4)
+      end
+    end
+  end
 
   describe '#create_grouped_objects' do
     context 'with data' do

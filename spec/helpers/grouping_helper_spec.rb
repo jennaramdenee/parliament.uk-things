@@ -26,6 +26,11 @@ RSpec.describe GroupingHelper do
     end
   end
 
+  describe '#create_sorted_array' do
+    # Tested in separate Helper classes
+  end
+
+
   describe '#group' do
     # Tested in separate Helper classes
   end

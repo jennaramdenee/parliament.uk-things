@@ -8,23 +8,28 @@ class WorkPackagesController < ApplicationController
   # @return [Grom::Node] object with type 'https://id.parliament.uk/schema/WorkPackageableThing'.
   # NB. work_package_id here represents the graph_id of a WorkPackageableThing Grom::Node
   def show
-    @work_packageable_thing, @work_package, @procedure, @business_items, @laying_business_item = Parliament::Utils::Helpers::FilterHelper.filter(
+    @work_package, @work_packageable_thing, @procedure, @actualized_procedure_steps, @possible_procedure_steps = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
       @request,
-      'WorkPackageableThing',
-      'WorkPackage',
-      'Procedure',
-      'BusinessItem'
+      'https://id.parliament.uk/schema/WorkPackage',
+      'https://id.parliament.uk/schema/WorkPackageableThing',
+      'https://id.parliament.uk/schema/Procedure',
+      'https://example.com/Actualized',
+      'https://example.com/Possible'
     )
 
-    @work_packageable_thing = @work_packageable_thing.first
     @work_package = @work_package.first
+    @work_packageable_thing = @work_packageable_thing.first
     @procedure = @procedure.first
 
-    @laying_business_item = @work_packageable_thing.laying_business_item
+
+    # Order business items by where they appear in the procedure
+    # @ordered_business_items = @actualized_procedure_steps.sort_by(:business_item_date, :distance_from_origin, :name).map(&:business_item).uniq
+    # @ordered_business_items = @actualized_procedure_steps.sort_by(:distance_from_origin, :business_item_date, :name).map(&:business_item).uniq
+    @ordered_business_items = @actualized_procedure_steps.sort_by(:distance_from_origin, :name).map(&:business_item).uniq
 
     # Group business items by their date
-    grouped_business_items = BusinessItemGroupingHelper.group(@business_items, :date)
+    @grouped_and_ordered_business_items = BusinessItemGroupingHelper.group(@ordered_business_items, :date)
 
-    @completed_business_items, @scheduled_business_items, @business_items_with_no_date = BusinessItemHelper.arrange_by_date(grouped_business_items)
+    # @completed_business_items, @scheduled_business_items, @business_items_with_no_date = BusinessItemHelper.arrange_by_date(grouped_business_items)
   end
 end

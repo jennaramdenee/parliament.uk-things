@@ -22,4 +22,22 @@ module GroupingHelper
       grouping_methods.inject(data_point) { |point, method| point.try(method) } || 'UNKNOWN'
     end
   end
+  
+  # Places unknown and ungrouped Grom::Nodes into sorted_array without calling any further methods on them
+  # For Grom::Nodes that need to be grouped, calls create_grouped_objects method and places result into sorted_array
+  #
+  # @param data_hash [Hash] Keys identify grouping, with each value being an array of grouped, ungrouped and unknown Grom::Nodes
+  # @return [Array] Array of unknown and ungrouped Grom::Nodes, and sorted and grouped instances of GroupingHelper::GroupedObject
+  def create_sorted_array(data_hash)
+    sorted_array = []
+    data_hash.each do |key, value|
+      # Identify Grom::Nodes that don't need to be grouped (either UNKNOWN or singular values)
+      sorted_array << if key == 'UNKNOWN' || value.length == 1
+        value
+      else
+        create_grouped_objects(data_hash, key)
+      end
+    end
+    sorted_array.flatten
+  end
 end

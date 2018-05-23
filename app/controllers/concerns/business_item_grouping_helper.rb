@@ -9,24 +9,6 @@ class BusinessItemGroupingHelper
     attr_accessor :date, :nodes, :type
   end
 
-  # Places ungrouped Grom::Nodes into sorted_array without calling any further methods on them
-  # For Grom::Nodes that need to be grouped, calls create_grouped_objects method and places result into sorted_array
-  #
-  # @param data_hash [Hash] Keys identify grouping, with each value being an array of grouped, ungrouped and unknown Grom::Nodes
-  # @return [Array] Array of unknown and ungrouped Grom::Nodes, and sorted and grouped instances of GroupingHelper::GroupedObject
-  def self.create_sorted_array(data_hash)
-    sorted_array = []
-    data_hash.each do |key, value|
-      # Identify Grom::Nodes that don't need to be grouped (singular values)
-      sorted_array << if value.length == 1
-                        value
-                      else
-                        create_grouped_objects(data_hash, key)
-                      end
-    end
-    sorted_array.flatten
-  end
-
   # Creates new BusinessItemGroupingHelper::BusinessItemGroupedObject, for each set of Grom::Nodes that have been grouped (nodes) and unknown
   # Each instance of BusinessItemGroupingHelper::BusinessItemGroupedObject is assigned properties of laying_date, nodes and type
   #

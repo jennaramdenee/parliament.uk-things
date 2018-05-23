@@ -5,7 +5,7 @@
     %h3= 'No date available'
 
   - business_item.nodes.each do |business_item_node|
-    - if business_item_node.sorted_procedure_steps_by_distance.any? || !business_item_node.web_link.empty?
+    - if business_item_node.sorted_procedure_steps_by_distance.any? || !business_item_node.weblink.empty?
       %ul.list--block
         %li
           .list--details
@@ -15,14 +15,18 @@
                   - procedure_step.houses.each do |house|
                     %span.hint= house.name
                   = procedure_step.name
-                  -# = procedure_step.distance_from_origin
-              %a{ href: "#{business_item_node.web_link}"}
+                  = procedure_step.distance_from_origin
+              %a{ href: "#{business_item_node.weblink}"}
                 = 'Read the business item'
 
 
 - else
-  %h3= "#{l(business_item.date, format: :default)}"
-  - if business_item.sorted_procedure_steps_by_distance.any? || !business_item.web_link.empty?
+  - if business_item.date
+    %h3= "#{l(business_item.date, format: :default)}"
+  - else
+    %h3= 'No date available'
+
+  - if business_item.sorted_procedure_steps_by_distance.any? || !business_item.weblink.empty?
     %ul.list--block
       %li
         .list--details
@@ -32,6 +36,6 @@
                 - procedure_step.houses.each do |house|
                   %span.hint= house.name
                 = procedure_step.name
-                -# = procedure_step.distance_from_origin
-            %a{ href: "#{business_item.web_link}" }
+                = procedure_step.distance_from_origin
+            %a{ href: "#{business_item.weblink}" }
               = 'Read the business item'

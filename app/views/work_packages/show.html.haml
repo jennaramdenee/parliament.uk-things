@@ -6,27 +6,25 @@
     %ul
       %li= "Subject to the #{@procedure.name.downcase} procedure"
 
-      - if @laying_business_item
-        %li= "Laid by the #{@laying_business_item.laying_body.name} on #{l(@laying_business_item.date, format: :default)}"
-
-      - unless @work_packageable_thing.web_link.empty?
-        = link_to(@work_packageable_thing.web_link) do
+      - unless @work_packageable_thing.weblink.empty?
+        = link_to(@work_packageable_thing.weblink) do
           %li= "Read the whatever we decide to call this, its purpose and related information"
 
-    - if @completed_business_items.any?
-      %h2= 'Completed steps'
+    - if @ordered_business_items.any?
+      %h2= 'Ordered steps'
       .track--alternative
-        - @completed_business_items.each do |completed_business_item|
-          = render partial: 'work_packages/business_item', locals: { business_item: completed_business_item }
+        - @ordered_business_items.each do |business_item|
+          = render partial: 'work_packages/business_item', locals: { business_item: business_item }
 
-    - if @scheduled_business_items.any?
-      %h2= 'Scheduled steps'
-      .track--alternative
-        - @scheduled_business_items.each do |scheduled_business_item|
-          = render partial: 'work_packages/business_item', locals: { business_item: scheduled_business_item }
+    -# - if @grouped_and_ordered_business_items.any?
+    -#   %h2= 'Grouped and ordered steps'
+    -#   .track--alternative
+    -#     - @grouped_and_ordered_business_items.each do |business_item|
+    -#       = render partial: 'work_packages/business_item', locals: { business_item: business_item }
 
-    - if @business_items_with_no_date.any?
-      %h2= 'Steps with no date'
-      .track--alternative
-        - @business_items_with_no_date.each do |business_item_with_no_date|
-          = render partial: 'work_packages/business_item', locals: { business_item: business_item_with_no_date }
+
+    -# - if @scheduled_business_items.any?
+    -#   %h2= 'Scheduled steps'
+    -#   .track--alternative
+    -#     - @scheduled_business_items.each do |scheduled_business_item|
+    -#       = render partial: 'work_packages/business_item', locals: { business_item: scheduled_business_item }

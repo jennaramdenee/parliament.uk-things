@@ -30,30 +30,30 @@ RSpec.describe BusinessItemGroupingHelper do
   end
 
 
-  describe '#create_sorted_array' do
-    context 'with no data' do
-      it 'returns an empty array' do
-        expect(BusinessItemGroupingHelper.create_sorted_array({})).to eq([])
-      end
-    end
-
-    context 'with data' do
-      let(:node1) { double('node1', :type => 'BusinessItem', :date => DateTime.new(2017, 4, 8))}
-      let(:node3) { double('node2', :type => 'BusinessItem', :date => DateTime.new(2015, 2, 16))}
-      let(:node2) { double('node3', :type => 'BusinessItem', :date => DateTime.new(2017, 4, 8))}
-      let(:node4) { double('node4', :type => 'BusinessItem', :date => nil)}
-      let(:node5) { double('node5', :type => 'BusinessItem', :date => nil)}
-      let(:data_hash) {{
-        DateTime.new(2017, 4, 8)  => [node1, node3],
-        DateTime.new(2015, 2, 16) => [node3],
-        'UNKNOWN'                 => [node4, node5]
-      }}
-
-      it 'returns an array of grouped objects' do
-        expect(BusinessItemGroupingHelper.create_sorted_array(data_hash).length).to eq(3)
-      end
-    end
-  end
+  # describe '#create_sorted_array' do
+  #   context 'with no data' do
+  #     it 'returns an empty array' do
+  #       expect(BusinessItemGroupingHelper.create_sorted_array({})).to eq([])
+  #     end
+  #   end
+  #
+  #   context 'with data' do
+  #     let(:node1) { double('node1', :type => 'BusinessItem', :date => DateTime.new(2017, 4, 8))}
+  #     let(:node3) { double('node2', :type => 'BusinessItem', :date => DateTime.new(2015, 2, 16))}
+  #     let(:node2) { double('node3', :type => 'BusinessItem', :date => DateTime.new(2017, 4, 8))}
+  #     let(:node4) { double('node4', :type => 'BusinessItem', :date => nil)}
+  #     let(:node5) { double('node5', :type => 'BusinessItem', :date => nil)}
+  #     let(:data_hash) {{
+  #       DateTime.new(2017, 4, 8)  => [node1, node3],
+  #       DateTime.new(2015, 2, 16) => [node3],
+  #       'UNKNOWN'                 => [node4, node5]
+  #     }}
+  #
+  #     it 'returns an array of grouped objects' do
+  #       expect(BusinessItemGroupingHelper.create_sorted_array(data_hash).length).to eq(3)
+  #     end
+  #   end
+  # end
 
   describe '#create_grouped_objects' do
     before(:each) do

@@ -10,24 +10,6 @@ class RoleGroupingHelper
     attr_accessor :start_date, :end_date, :nodes, :type
   end
 
-  # Places unknown and ungrouped Grom::Nodes into sorted_array without calling any further methods on them
-  # For Grom::Nodes that need to be grouped, calls create_grouped_objects method and places result into sorted_array
-  #
-  # @param data_hash [Hash] Keys identify grouping, with each value being an array of grouped, ungrouped and unknown Grom::Nodes
-  # @return [Array] Array of unknown and ungrouped Grom::Nodes, and sorted and grouped instances of GroupingHelper::GroupedObject
-  def self.create_sorted_array(data_hash)
-    sorted_array = []
-    data_hash.each do |key, value|
-      # Identify Grom::Nodes that don't need to be grouped (either UNKNOWN or singular values)
-      sorted_array << if key == 'UNKNOWN' || value.length == 1
-        value
-      else
-        create_grouped_objects(data_hash, key)
-      end
-    end
-    sorted_array.flatten
-  end
-
   # Creates new GroupingHelper::GroupedObject, for each set of Grom::Nodes that have been grouped (nodes)
   # Each instance of GroupingHelper::GroupedObject is assigned properties of start_date, end_date, nodes and type
   # Once object has been created, calls sort_grouped_nodes_by_date method to sort that object's nodes by date

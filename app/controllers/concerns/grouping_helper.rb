@@ -22,7 +22,7 @@ module GroupingHelper
       grouping_methods.inject(data_point) { |point, method| point.try(method) } || 'UNKNOWN'
     end
   end
-  
+
   # Places unknown and ungrouped Grom::Nodes into sorted_array without calling any further methods on them
   # For Grom::Nodes that need to be grouped, calls create_grouped_objects method and places result into sorted_array
   #

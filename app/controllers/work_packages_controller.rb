@@ -6,7 +6,6 @@ class WorkPackagesController < ApplicationController
   }.freeze
 
   # @return [Grom::Node] object with type 'https://id.parliament.uk/schema/WorkPackageableThing'.
-  # NB. work_package_id here represents the graph_id of a WorkPackageableThing Grom::Node
   def show
     @work_package, @work_packageable_thing, @procedure, @actualized_procedure_steps, @possible_procedure_steps = Parliament::Utils::Helpers::RequestHelper.filter_response_data(
       @request,
@@ -24,11 +23,5 @@ class WorkPackagesController < ApplicationController
 
     # Sort procedure steps first by distance, and then by business item date, putting those with nil at the end
     @ordered_procedure_steps = ProcedureStepHelper.arrange_by_distance_and_date(@actualized_procedure_steps)
-
-    # Map to business item and remove duplicates
-    @ordered_business_items = @ordered_procedure_steps.flatten.map(&:business_item).uniq
-
-    # Group business items by their date
-    # @grouped_and_ordered_business_items = BusinessItemGroupingHelper.group(@ordered_business_items, :date)
   end
 end

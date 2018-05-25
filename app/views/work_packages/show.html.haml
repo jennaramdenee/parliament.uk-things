@@ -1,29 +1,45 @@
+- page_title = title(@work_packageable_thing.name)
+
 .section--primary#content{ tabindex: "0" }
   .container
-    %h1= title(@work_packageable_thing.name)
+    %h1
+      %span= page_title
 
-    %h2= "About the whatever we decide to call this"
     %ul
-      %li= "Subject to the #{@procedure.name.downcase} procedure"
+      %li
+        =t('.subject_to').capitalize
+        = link_to("#{@procedure.name.downcase} #{t('.procedure')}", procedure_path(@procedure.graph_id))
 
       - unless @work_packageable_thing.weblink.empty?
-        = link_to(@work_packageable_thing.weblink) do
-          %li= "Read the whatever we decide to call this, its purpose and related information"
+        %li
+          = link_to(@work_packageable_thing.weblink) do
+            = t('.related_information')
 
-    - if @ordered_business_items.any?
+- if @ordered_procedure_steps.any?
+  %section.section--wide
+    .container
       %h2= 'Ordered steps'
-      .track--alternative
-        - @ordered_business_items.each do |business_item|
-          = render partial: 'work_packages/business_item', locals: { business_item: business_item }
+      %ul.list--block
+        - @ordered_procedure_steps.each do |ordered_procedure_step|
+          %li
+            .card
+              .card__details
+                %h3= ordered_procedure_step.name
+                - ordered_procedure_step.business_items.each do |business_item|
+                  - if business_item.date
+                    %p= "#{l(business_item.date, format: :default)}"
+                - ordered_procedure_step.houses.each do |house|
+                  %span.hint= house.name
+                  -# %p= ordered_procedure_step.distance_from_origin
 
-    - if @possible_procedure_steps.any?
+- if @possible_procedure_steps.any?
+  %section.section--wide
+    .container
       %h2= 'Possible steps'
-      - @possible_procedure_steps.each do |possible_procedure_step|
-        %p= possible_procedure_step.name
-        %p= possible_procedure_step.distance_from_origin
-
-    -# - if @grouped_and_ordered_business_items.any?
-    -#   %h2= 'Grouped and ordered steps'
-    -#   .track--alternative
-    -#     - @grouped_and_ordered_business_items.each do |business_item|
-    -#       = render partial: 'work_packages/business_item', locals: { business_item: business_item }
+      %ul.list--block
+        - @possible_procedure_steps.each do |possible_procedure_step|
+          %li
+            .card
+              .card__details
+                %p= possible_procedure_step.name
+                -# %p= possible_procedure_step.distance_from_origin

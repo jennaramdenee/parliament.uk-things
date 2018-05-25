@@ -5,7 +5,7 @@ RSpec.describe 'work_packages/show', vcr: true do
     assign(:work_packageable_thing,
       double(:work_packageable_thing,
         name:'Test work package name',
-        web_link: 'www.legislation.gov/test-memorandum',
+        weblink: 'www.legislation.gov/test-memorandum',
       )
     )
   }
@@ -13,7 +13,28 @@ RSpec.describe 'work_packages/show', vcr: true do
   let!(:procedure) {
     assign(:procedure,
       double(:procedure,
-        name: 'Draft affirmative'
+        name: 'Draft affirmative',
+        graph_id: 't4fvh8mn'
+      )
+    )
+  }
+
+  let!(:ordered_procedure_steps) {
+    assign(:ordered_procedure_steps, [])
+  }
+
+  let!(:possible_procedure_steps) {
+    assign(:possible_procedure_steps, [])
+  }
+
+  let!(:procedure_step) {
+    assign(:procedure_step,
+      double(:procedure_step,
+        name: 'Procedure step name 1',
+        houses: [
+          double(:house, name: 'House of Commons')
+        ],
+        business_item: business_item
       )
     )
   }
@@ -23,7 +44,7 @@ RSpec.describe 'work_packages/show', vcr: true do
       double(:business_item,
         class: 'https://id.parliament.uk/BusinessItem',
         date: DateTime.new(2018,05,30),
-        web_link: 'www.test2.com',
+        weblink: 'www.test2.com',
         sorted_procedure_steps_by_distance: [
           double(:procedure_step,
             name: 'Procedure step name 2',
@@ -37,29 +58,6 @@ RSpec.describe 'work_packages/show', vcr: true do
     )
   }
 
-  let!(:laying_business_item) {
-    assign(:laying_business_item,
-      double(:laying_business_item,
-        date: DateTime.new(2018,06,04),
-        laying_body: double(:laying_body,
-          name: 'Cabinet Office'
-        )
-      )
-    )
-  }
-
-  let!(:completed_business_items) {
-    assign(:completed_business_items, [])
-  }
-
-  let!(:scheduled_business_items) {
-    assign(:scheduled_business_items, [])
-  }
-
-  let!(:business_items_with_no_date) {
-    assign(:business_items_with_no_date, [])
-  }
-
   before(:each) do
     render
   end
@@ -71,10 +69,6 @@ RSpec.describe 'work_packages/show', vcr: true do
   end
 
   context 'about' do
-    it 'displays heading' do
-      expect(rendered).to match(/About the whatever we decide to call this/)
-    end
-
     it 'displays procedure name' do
       expect(rendered).to match(/draft affirmative/)
     end
@@ -84,46 +78,96 @@ RSpec.describe 'work_packages/show', vcr: true do
     end
   end
 
-  context 'completed steps' do
+  context 'ordered steps' do
     context 'when they exist' do
-      let!(:completed_business_items) {
-        assign(:completed_business_items, [business_item])
+      let!(:ordered_procedure_steps) {
+        assign(:ordered_procedure_steps, [procedure_step])
       }
 
       it 'will render heading' do
-        expect(response).to match(/Completed steps/)
+        expect(response).to match(/Ordered steps/)
       end
 
-      it 'will render the work_packages/business_item partial' do
-        expect(response).to render_template(partial: 'work_packages/_business_item')
+      it 'will render step name' do
+        expect(response).to match(/Procedure step name 1/)
+      end
+
+      it 'will render step houses' do
+        expect(response).to match(/House of Commons/)
+      end
+
+      context 'with a business item date' do
+        it 'will render date' do
+          expect(response).to match(DateTime.new(2018,05,30))
+        end
+      end
+
+      context 'with no business item date' do
+        let!(:business_item){
+          assign(:business_item,
+            double(:business_item,
+              class: 'https://id.parliament.uk/BusinessItem',
+              date: nil,
+              weblink: 'www.test2.com',
+              sorted_procedure_steps_by_distance: [
+                double(:procedure_step,
+                  name: 'Procedure step name 2',
+                  houses: [
+                    double(:house, name: 'House of Lords'),
+                    double(:house, name: 'House of Commons')
+                  ]
+                )
+              ]
+            )
+          )
+        }
+        it 'will not render date' do
+          expect(response).not_to match(/3 Mar 2018/)
+        end
       end
     end
 
     context 'when they do not exist' do
-      it 'will not render the work_packages/business_item partial' do
-        expect(response).not_to render_template(partial: 'work_packages/_business_item')
+      it 'will not render heading' do
+        expect(response).not_to match(/Ordered steps/)
+      end
+
+      it 'will not render step name' do
+        expect(response).not_to match(/Procedure step name 1/)
+      end
+
+      it 'will not render step houses' do
+        expect(response).not_to match(/House of Commons/)
+      end
+
+      it 'will not render date' do
+        expect(response).not_to match(/3 Mar 2018/)
       end
     end
   end
 
-  context 'scheduled steps' do
+  context 'possible steps' do
     context 'when they exist' do
-      let!(:scheduled_business_items) {
-        assign(:scheduled_business_items, [business_item])
+      let!(:possible_procedure_steps) {
+        assign(:possible_procedure_steps, [procedure_step])
       }
 
       it 'will render heading' do
-        expect(response).to match(/Scheduled steps/)
+        expect(response).to match(/Possible steps/)
       end
 
-      it 'will render the work_packages/business_item partial' do
-        expect(response).to render_template(partial: 'work_packages/_business_item')
+      it 'will render step name' do
+        expect(response).to match(/Procedure step name 1/)
       end
     end
 
     context 'when they do not exist' do
-      it 'will not render the work_packages/business_item partial' do
-        expect(response).not_to render_template(partial: 'work_packages/_business_item')
+      it 'will not render heading' do
+        expect(response).not_to match(/Possible steps/)
+      end
+
+      it 'will not render step name' do
+        expect(response).not_to match(/Procedure step name 1/)
       end
     end
   end

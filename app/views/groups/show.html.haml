@@ -1,6 +1,6 @@
-- page_title = title("#{@group.name}")
+- page_title = title("#{@group_name}")
 
-- if @group.name.present?
+- if @group_name.present?
 
   #content.section--primary{ tabindex: '0' }
     .container
@@ -73,4 +73,4 @@
 
             - if @postal_address
               %dt= "#{t('contact_points.address').capitalize}:"
-              %dd= "#{@group.name}, #{@postal_address.full_address}"
+              %dd= "#{@group_name}, #{@postal_address.full_address}"

@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
     )
 
   	@group = @group.first
+    @group_name = GroupHelper.assign_attribute(@group, :name, [:formalBody, :group])
     @postal_address = @postal_address.first
     @chair_people = @group.chair_people if @group.formal_body?
   end

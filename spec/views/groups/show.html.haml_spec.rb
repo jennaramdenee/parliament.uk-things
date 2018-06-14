@@ -4,7 +4,6 @@ RSpec.describe 'groups/show' do
   let!(:group) {
     assign(:group,
       double(:group,
-        name: 'Test Group Name',
         graph_id: 'df5n8bxs',
         joint?: false,
         select_committee?: true,
@@ -15,6 +14,10 @@ RSpec.describe 'groups/show' do
         formal_body?: true
       )
     )
+  }
+
+  let!(:group_name) {
+    assign(:group_name, 'Test Group Name')
   }
 
   let!(:chair_people) {
@@ -71,7 +74,6 @@ RSpec.describe 'groups/show' do
         let!(:group) {
           assign(:group,
             double(:group,
-              name: 'Test Group Name',
               graph_id: 'df5n8bxs',
               joint?: true,
               select_committee?: true,
@@ -99,7 +101,6 @@ RSpec.describe 'groups/show' do
         let!(:group) {
           assign(:group,
             double(:group,
-              name: 'Test Group Name',
               graph_id: 'df5n8bxs',
               joint?: false,
               select_committee?: true,
@@ -122,7 +123,6 @@ RSpec.describe 'groups/show' do
       let!(:group) {
         assign(:group,
           double(:group,
-            name: 'Test Group Name',
             graph_id: 'df5n8bxs',
             joint?: false,
             select_committee?: false,
@@ -153,7 +153,6 @@ RSpec.describe 'groups/show' do
         let!(:group) {
           assign(:group,
             double(:group,
-              name: 'Test Group Name',
               graph_id: 'df5n8bxs',
               joint?: false,
               select_committee?: true,
@@ -231,7 +230,6 @@ RSpec.describe 'groups/show' do
       let!(:group) {
         assign(:group,
           double(:group,
-            name: 'Test Group Name',
             graph_id: 'df5n8bxs',
             joint?: false,
             select_committee?: true,

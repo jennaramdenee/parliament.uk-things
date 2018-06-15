@@ -12,7 +12,8 @@ RSpec.describe 'groups/show' do
         committee_type: 'select',
         remit: 'Some test remit, illustrating what the group is all about',
         member_count: 13,
-        formal_body?: true
+        formal_body?: true,
+        current?: true
       )
     )
   }
@@ -79,7 +80,8 @@ RSpec.describe 'groups/show' do
               committee_type: 'select',
               remit: 'Some test remit, illustrating what the group is all about',
               member_count: 13,
-              formal_body?: true
+              formal_body?: true,
+              current?: true
             )
           )
         }
@@ -107,7 +109,8 @@ RSpec.describe 'groups/show' do
               committee_type: 'select',
               remit: 'Some test remit, illustrating what the group is all about',
               member_count: 13,
-              formal_body?: true
+              formal_body?: true,
+              current?: true
             )
           )
         }
@@ -130,7 +133,8 @@ RSpec.describe 'groups/show' do
             committee_type: 'select',
             remit: 'Some test remit, illustrating what the group is all about',
             member_count: 13,
-            formal_body?: false
+            formal_body?: false,
+            current?: true
           )
         )
       }
@@ -161,7 +165,8 @@ RSpec.describe 'groups/show' do
               committee_type: 'select',
               remit: '',
               member_count: 13,
-              formal_body?: true
+              formal_body?: true,
+              current?: true
             )
           )
         }
@@ -239,7 +244,8 @@ RSpec.describe 'groups/show' do
             committee_type: 'select',
             remit: 'Some test remit, illustrating what the group is all about',
             member_count: nil,
-            formal_body?: true
+            formal_body?: true,
+            current?: true
           )
         )
       }
@@ -294,33 +300,65 @@ RSpec.describe 'groups/show' do
   end
 
   context 'contact points' do
-    context 'when they exist' do
-      context 'email' do
-        it 'heading displays correctly' do
-          expect(rendered).to match(/Email:/)
+    context 'when group is current' do
+      context 'when they exist' do
+        context 'email' do
+          it 'heading displays correctly' do
+            expect(rendered).to match(/Email:/)
+          end
+
+          it 'link displays correctly' do
+            expect(rendered).to match(/<a href="mailto:test@group.com">test@group.com<\/a>/)
+          end
         end
 
-        it 'link displays correctly' do
-          expect(rendered).to match(/<a href="mailto:test@group.com">test@group.com<\/a>/)
+        context 'phone number' do
+          it 'heading displays correctly' do
+            expect(rendered).to match(/Phone:/)
+          end
+
+          it 'link displays correctly' do
+            expect(rendered).to match(/<a href="tel:01234567890">01234567890<\/a>/)
+          end
         end
       end
 
-      context 'phone number' do
-        it 'heading displays correctly' do
-          expect(rendered).to match(/Phone:/)
+      context 'when they do not exist' do
+        let!(:contact_points) {
+          assign(:contact_points, [])
+        }
+
+        context 'email' do
+          it 'heading does not display' do
+            expect(rendered).not_to match(/Email:/)
+          end
         end
 
-        it 'link displays correctly' do
-          expect(rendered).to match(/<a href="tel:01234567890">01234567890<\/a>/)
+        context 'phone number' do
+          it 'heading does not display' do
+            expect(rendered).not_to match(/Phone:/)
+          end
         end
       end
     end
 
-    context 'when they do not exist' do
-      let!(:contact_points) {
-        assign(:contact_points, [])
+    context 'when group is not current' do
+      let!(:group) {
+        assign(:group,
+          double(:group,
+            name: 'Test Group Name',
+            graph_id: 'df5n8bxs',
+            joint?: false,
+            select_committee?: true,
+            houses: [double(:house, name: 'House of Commons')],
+            committee_type: 'select',
+            remit: 'Some test remit, illustrating what the group is all about',
+            member_count: 13,
+            formal_body?: true,
+            current?: false
+          )
+        )
       }
-
       context 'email' do
         it 'heading does not display' do
           expect(rendered).not_to match(/Email:/)

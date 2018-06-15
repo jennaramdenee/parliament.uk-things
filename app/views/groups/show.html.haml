@@ -55,21 +55,22 @@
 
         %p= link_to "#{t('view_all').capitalize} #{@group.member_count} #{t('committee')} #{t('member_plural')}", "/groups/#{@group.graph_id}/memberships/current"
 
-  - if @contact_points.any? || @postal_address
+  - if (@group.current? && @contact_points.any?) || @postal_address
     %section
       .container
         %h2= "#{t('.contact_us').capitalize}"
 
         .block
           %dl.list--definition
-            - @contact_points.each do |contact_point|
-              - if contact_point.email.present?
-                %dt= "#{t('contact_points.email').capitalize}:"
-                %dd= link_to "#{contact_point.email}", "mailto:#{contact_point.email}"
+            - if @group.current? && @contact_points.any?
+              - @contact_points.each do |contact_point|
+                - if contact_point.email.present?
+                  %dt= "#{t('contact_points.email').capitalize}:"
+                  %dd= link_to "#{contact_point.email}", "mailto:#{contact_point.email}"
 
-              - if contact_point.phone_number.present?
-                %dt= "#{t('contact_points.phone').capitalize}:"
-                %dd= link_to "#{contact_point.phone_number}", "tel:#{contact_point.phone_number.gsub(/\s+/, "")}"
+                - if contact_point.phone_number.present?
+                  %dt= "#{t('contact_points.phone').capitalize}:"
+                  %dd= link_to "#{contact_point.phone_number}", "tel:#{contact_point.phone_number.gsub(/\s+/, "")}"
 
             - if @postal_address
               %dt= "#{t('contact_points.address').capitalize}:"
